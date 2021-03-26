@@ -16,5 +16,10 @@ namespace SerieA20_21
         {
             InitializeComponent();
         }
+
+        private void btn_esci_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
