@@ -30,9 +30,23 @@ namespace SerieA20_21
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_giornata = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbo_inserimento = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_salva = new XanderUI.XUIButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.box_classifica = new XanderUI.XUICustomGroupbox();
@@ -62,17 +76,23 @@ namespace SerieA20_21
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cbo_squadra = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_esci = new XanderUI.XUIButton();
-            this.btn_squadraMaxGol = new XanderUI.XUIButton();
+            this.btn_statistiche = new XanderUI.XUIButton();
             this.btn_elencoGiornata = new XanderUI.XUIButton();
             this.btn_partiteGiocate = new XanderUI.XUIButton();
             this.btn_inserimento = new XanderUI.XUIButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.box_classifica.SuspendLayout();
@@ -80,8 +100,10 @@ namespace SerieA20_21
             this.panel5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,7 +115,7 @@ namespace SerieA20_21
             this.panel1.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1121, 578);
+            this.panel1.Size = new System.Drawing.Size(1121, 723);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -107,18 +129,140 @@ namespace SerieA20_21
             this.tabControl1.Location = new System.Drawing.Point(0, 113);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1121, 465);
+            this.tabControl1.Size = new System.Drawing.Size(1121, 610);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel8);
+            this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1113, 428);
+            this.tabPage1.Size = new System.Drawing.Size(1113, 573);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inserimento";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Controls.Add(this.label7);
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.txt_giornata);
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.cbo_inserimento);
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1107, 94);
+            this.panel8.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(756, 66);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 24);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Squadra 1";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(511, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 24);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Squadra 1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(272, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 24);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Stadio";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 24);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Data/ora";
+            // 
+            // txt_giornata
+            // 
+            this.txt_giornata.Enabled = false;
+            this.txt_giornata.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_giornata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.txt_giornata.Location = new System.Drawing.Point(1040, 11);
+            this.txt_giornata.Name = "txt_giornata";
+            this.txt_giornata.Size = new System.Drawing.Size(51, 31);
+            this.txt_giornata.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(953, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Giornata";
+            // 
+            // cbo_inserimento
+            // 
+            this.cbo_inserimento.FormattingEnabled = true;
+            this.cbo_inserimento.Location = new System.Drawing.Point(169, 14);
+            this.cbo_inserimento.Name = "cbo_inserimento";
+            this.cbo_inserimento.Size = new System.Drawing.Size(227, 32);
+            this.cbo_inserimento.TabIndex = 14;
+            this.cbo_inserimento.SelectedIndexChanged += new System.EventHandler(this.cbo_inserimento_SelectedIndexChanged_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 24);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Scegli la giornata";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btn_salva);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1107, 567);
+            this.panel7.TabIndex = 0;
+            // 
+            // btn_salva
+            // 
+            this.btn_salva.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_salva.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_salva.ButtonImage")));
+            this.btn_salva.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btn_salva.ButtonText = "Salva";
+            this.btn_salva.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btn_salva.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_salva.CornerRadius = 5;
+            this.btn_salva.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_salva.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btn_salva.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_salva.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btn_salva.Location = new System.Drawing.Point(915, 518);
+            this.btn_salva.Name = "btn_salva";
+            this.btn_salva.Size = new System.Drawing.Size(156, 46);
+            this.btn_salva.TabIndex = 17;
+            this.btn_salva.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_salva.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_salva.Visible = false;
+            this.btn_salva.Click += new System.EventHandler(this.btn_salva_Click);
             // 
             // tabPage5
             // 
@@ -126,7 +270,7 @@ namespace SerieA20_21
             this.tabPage5.Controls.Add(this.panel5);
             this.tabPage5.Location = new System.Drawing.Point(4, 33);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1113, 428);
+            this.tabPage5.Size = new System.Drawing.Size(1113, 573);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Partite per giornata";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -138,7 +282,7 @@ namespace SerieA20_21
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(158, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(955, 428);
+            this.panel6.Size = new System.Drawing.Size(955, 573);
             this.panel6.TabIndex = 1;
             // 
             // box_classifica
@@ -150,7 +294,7 @@ namespace SerieA20_21
             this.box_classifica.Location = new System.Drawing.Point(411, 0);
             this.box_classifica.Name = "box_classifica";
             this.box_classifica.ShowText = true;
-            this.box_classifica.Size = new System.Drawing.Size(544, 428);
+            this.box_classifica.Size = new System.Drawing.Size(544, 573);
             this.box_classifica.TabIndex = 3;
             this.box_classifica.TabStop = false;
             this.box_classifica.Text = "Classifica";
@@ -168,7 +312,7 @@ namespace SerieA20_21
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(3, 27);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(538, 398);
+            this.listView3.Size = new System.Drawing.Size(538, 543);
             this.listView3.TabIndex = 12;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -206,7 +350,7 @@ namespace SerieA20_21
             this.box_partite.Location = new System.Drawing.Point(0, 0);
             this.box_partite.Name = "box_partite";
             this.box_partite.ShowText = true;
-            this.box_partite.Size = new System.Drawing.Size(411, 428);
+            this.box_partite.Size = new System.Drawing.Size(411, 573);
             this.box_partite.TabIndex = 2;
             this.box_partite.TabStop = false;
             this.box_partite.Text = "Partite";
@@ -222,7 +366,7 @@ namespace SerieA20_21
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(3, 27);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(405, 398);
+            this.listView2.Size = new System.Drawing.Size(405, 543);
             this.listView2.TabIndex = 11;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -248,7 +392,7 @@ namespace SerieA20_21
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(158, 428);
+            this.panel5.Size = new System.Drawing.Size(158, 573);
             this.panel5.TabIndex = 0;
             // 
             // lst_giornata
@@ -258,7 +402,7 @@ namespace SerieA20_21
             this.lst_giornata.ItemHeight = 24;
             this.lst_giornata.Location = new System.Drawing.Point(0, 0);
             this.lst_giornata.Name = "lst_giornata";
-            this.lst_giornata.Size = new System.Drawing.Size(158, 428);
+            this.lst_giornata.Size = new System.Drawing.Size(158, 573);
             this.lst_giornata.TabIndex = 0;
             this.lst_giornata.SelectedIndexChanged += new System.EventHandler(this.lst_giornata_SelectedIndexChanged);
             // 
@@ -269,7 +413,7 @@ namespace SerieA20_21
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1113, 428);
+            this.tabPage2.Size = new System.Drawing.Size(1113, 573);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Elenco Partite Giocate";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -289,7 +433,7 @@ namespace SerieA20_21
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 45);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1107, 380);
+            this.listView1.Size = new System.Drawing.Size(1107, 525);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -358,18 +502,39 @@ namespace SerieA20_21
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.chart1);
+            this.tabPage3.Controls.Add(this.cbo_squadra);
+            this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1113, 428);
+            this.tabPage3.Size = new System.Drawing.Size(1113, 573);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Classifica";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // cbo_squadra
+            // 
+            this.cbo_squadra.FormattingEnabled = true;
+            this.cbo_squadra.Location = new System.Drawing.Point(483, 14);
+            this.cbo_squadra.Name = "cbo_squadra";
+            this.cbo_squadra.Size = new System.Drawing.Size(227, 32);
+            this.cbo_squadra.TabIndex = 3;
+            this.cbo_squadra.SelectedIndexChanged += new System.EventHandler(this.cbo_squadra_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(333, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(144, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Scegli la squadra";
             // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1113, 428);
+            this.tabPage4.Size = new System.Drawing.Size(1113, 573);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "SquadraMaxGol";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -378,7 +543,7 @@ namespace SerieA20_21
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
             this.panel2.Controls.Add(this.btn_esci);
-            this.panel2.Controls.Add(this.btn_squadraMaxGol);
+            this.panel2.Controls.Add(this.btn_statistiche);
             this.panel2.Controls.Add(this.btn_elencoGiornata);
             this.panel2.Controls.Add(this.btn_partiteGiocate);
             this.panel2.Controls.Add(this.btn_inserimento);
@@ -410,27 +575,27 @@ namespace SerieA20_21
             this.btn_esci.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btn_esci.Click += new System.EventHandler(this.btn_esci_Click);
             // 
-            // btn_squadraMaxGol
+            // btn_statistiche
             // 
-            this.btn_squadraMaxGol.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_squadraMaxGol.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_squadraMaxGol.ButtonImage")));
-            this.btn_squadraMaxGol.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btn_squadraMaxGol.ButtonText = "Squadra che ha segnato piùgol";
-            this.btn_squadraMaxGol.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btn_squadraMaxGol.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_squadraMaxGol.CornerRadius = 5;
-            this.btn_squadraMaxGol.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_squadraMaxGol.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_squadraMaxGol.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btn_squadraMaxGol.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_squadraMaxGol.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btn_squadraMaxGol.Location = new System.Drawing.Point(601, 0);
-            this.btn_squadraMaxGol.Name = "btn_squadraMaxGol";
-            this.btn_squadraMaxGol.Size = new System.Drawing.Size(207, 49);
-            this.btn_squadraMaxGol.TabIndex = 3;
-            this.btn_squadraMaxGol.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_squadraMaxGol.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_squadraMaxGol.Click += new System.EventHandler(this.btn_squadraMaxGol_Click);
+            this.btn_statistiche.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_statistiche.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_statistiche.ButtonImage")));
+            this.btn_statistiche.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btn_statistiche.ButtonText = "Statistiche";
+            this.btn_statistiche.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btn_statistiche.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_statistiche.CornerRadius = 5;
+            this.btn_statistiche.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_statistiche.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_statistiche.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btn_statistiche.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_statistiche.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btn_statistiche.Location = new System.Drawing.Point(601, 0);
+            this.btn_statistiche.Name = "btn_statistiche";
+            this.btn_statistiche.Size = new System.Drawing.Size(207, 49);
+            this.btn_statistiche.TabIndex = 3;
+            this.btn_statistiche.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_statistiche.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_statistiche.Click += new System.EventHandler(this.btn_squadraMaxGol_Click);
             // 
             // btn_elencoGiornata
             // 
@@ -519,30 +684,51 @@ namespace SerieA20_21
             this.label1.TabIndex = 0;
             this.label1.Text = "Serie A - Campionato 2020/2021";
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(91, 88);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(639, 210);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 578);
+            this.ClientSize = new System.Drawing.Size(1121, 723);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Serie A Campionato 2020/2021";
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.box_classifica.ResumeLayout(false);
-            this.box_classifica.PerformLayout();
             this.box_partite.ResumeLayout(false);
-            this.box_partite.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -555,7 +741,7 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label1;
         private XanderUI.XUIButton btn_inserimento;
         private XanderUI.XUIButton btn_esci;
-        private XanderUI.XUIButton btn_squadraMaxGol;
+        private XanderUI.XUIButton btn_statistiche;
         private XanderUI.XUIButton btn_elencoGiornata;
         private XanderUI.XUIButton btn_partiteGiocate;
         private System.Windows.Forms.TabControl tabControl1;
@@ -590,6 +776,20 @@ namespace SerieA20_21
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.Panel panel7;
+        private XanderUI.XUIButton btn_salva;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_giornata;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbo_inserimento;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbo_squadra;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

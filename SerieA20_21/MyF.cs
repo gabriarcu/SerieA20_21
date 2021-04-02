@@ -36,19 +36,20 @@ namespace SerieA20_21
             cla[4].squadra = "Crotone";
             cla[5].squadra = "Fiorentina";
             cla[6].squadra = "Genoa";
-            cla[7].squadra = "Inter";
-            cla[8].squadra = "Juventus";
-            cla[9].squadra = "Lazio";
-            cla[10].squadra = "Milan";
-            cla[11].squadra = "Napoli";
-            cla[12].squadra = "Parma";
-            cla[13].squadra = "Roma";
-            cla[14].squadra = "Sampdoria";
-            cla[15].squadra = "Sassuolo";
-            cla[16].squadra = "Spezia";
-            cla[17].squadra = "Torino";
-            cla[18].squadra = "Udinese";
-            cla[19].squadra = "Verona";
+            cla[7].squadra = "Hellas Verona";
+            cla[8].squadra = "Inter";
+            cla[9].squadra = "Juventus";
+            cla[10].squadra = "Lazio";
+            cla[11].squadra = "Milan";
+            cla[12].squadra = "Napoli";
+            cla[13].squadra = "Parma";
+            cla[14].squadra = "Roma";
+            cla[15].squadra = "Sampdoria";
+            cla[16].squadra = "Sassuolo";
+            cla[17].squadra = "Spezia";
+            cla[18].squadra = "Torino";
+            cla[19].squadra = "Udinese";
+            
         }
 
 }
