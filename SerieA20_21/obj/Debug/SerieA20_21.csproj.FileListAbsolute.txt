@@ -9,9 +9,4 @@ C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\obj\Debug\Ser
 C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\obj\Debug\SerieA20_21.csproj.CopyComplete
 C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\obj\Debug\SerieA20_21.exe
 C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\obj\Debug\SerieA20_21.pdb
-C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\bin\Debug\netchartdir.dll
-C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\bin\Debug\netchartdir.xml
 C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\obj\Debug\SerieA20_21.csprojAssemblyReference.cache
-C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\bin\Debug\Aspose.Words.dll
-C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\bin\Debug\Aspose.Words.Pdf2Word.dll
-C:\Users\Gabriele\Desktop\Repo\SerieA20_21\SerieA20_21\SerieA20_21\bin\Debug\Aspose.Words.xml
