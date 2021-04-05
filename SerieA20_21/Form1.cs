@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aspose.Words.Drawing.Charts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SerieA20_21
 {
@@ -175,6 +177,7 @@ namespace SerieA20_21
         private void btn_squadraMaxGol_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(3);
+            chart1.Series.Clear();
 
 
         }
@@ -497,25 +500,75 @@ namespace SerieA20_21
         {
             string selezione = cbo_squadra.SelectedItem.ToString();
             int x = 0;
-            
+            chart1.Series.Clear();
+            string seriesName = "Gol" + selezione;
+            Series ser = new Series(seriesName);
+            ser.Name = seriesName;
+            ser.ChartType = SeriesChartType.Column;
+            ser.Palette = ChartColorPalette.Pastel;
+            chart1.ChartAreas[0].AxisX.Minimum = 0;
+            chart1.ChartAreas[0].AxisX.Interval = 1;
+            chart1.ChartAreas[0].AxisY.Interval = 1;
+
 
             while (x<num)
             {
                 if(p[x].squadra1==selezione)
                 {
-                    //grafico_gol.Items.Add(p[x].risultato1);
-                    //grafico_.Items.Add(p[x].risultato1);
-                    //grafico_2.numbers.Add(p[x].risultato1);
+                    ser.Points.AddXY(p[x].giornata,p[x].risultato1);
                 }
+                
                 if (p[x].squadra2 == selezione)
                 {
-                    //grafico_gol.Items.Add(p[x].risultato2);
-                    //grafico_.Items.Add(p[x].risultato2);
-                    //grafico_2.numbers.Add(p[x].risultato2);
+                    ser.Points.AddXY(p[x].giornata, p[x].risultato2);
                 }
                 x = x + 1;
             }
+            chart1.Series.Add(ser);
+
+
+            int xx = 0;
             
+
+
+            while (xx <20)
+            {
+                if (c[xx].squadra == selezione)
+                {
+                    chart2.Series.Clear();
+                    chart2.Legends.Clear();
+
+                    //Add a new Legend(if needed) and do some formating
+                    chart2.Legends.Add("Partite Vinte");
+                    chart2.Legends[0].LegendStyle = LegendStyle.Table;
+                    chart2.Legends[0].Docking = Docking.Bottom;
+                    chart2.Legends[0].Alignment = StringAlignment.Center;
+                    chart2.Legends[0].Title = "Partite";
+                    chart2.Legends[0].BorderColor = Color.Black;
+
+                    //Add a new chart-series
+                    string seriesname = "pVinte";
+
+
+                    chart2.Series.Add(seriesname);
+
+                    //set the chart-type to "Pie"
+                    chart2.Series[seriesname].ChartType = SeriesChartType.Pie;
+                    chart2.Series[seriesname].Palette= ChartColorPalette.Pastel;
+                    //Add some datapoints so the series. in this case you can pass the values to this method
+                    chart2.Series[seriesname].Points.Add(c[xx].vinte);
+                    chart2.Series[seriesname].Points.Add(c[xx].perse);
+                    chart2.Series[seriesname].Points.Add(c[xx].pareggiate);
+
+
+
+
+
+                }
+                xx = xx + 1;
+            }
+        
+
         }
     }
 }
