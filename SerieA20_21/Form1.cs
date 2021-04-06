@@ -178,6 +178,77 @@ namespace SerieA20_21
         {
             tabControl1.SelectTab(3);
             chart1.Series.Clear();
+            chart2.Series.Clear();
+            graf_vinte.percentage = 0;
+            graf_perse.percentage = 0;
+            graf_pareggiate.percentage = 0;
+
+            int w = 0;
+
+            for (int zz = 0; zz < 20; zz++)
+            {
+                c[zz].punti = 0;
+                c[zz].vinte = 0;
+                c[zz].pareggiate = 0;
+                c[zz].perse = 0;
+            }
+
+
+            while (w < num)
+            {
+
+                
+                    if (p[w].risultato1 > p[w].risultato2)
+                    {
+                        for (int zz = 0; zz < 20; zz++)
+                        {
+                            if (p[w].squadra1 == c[zz].squadra)
+                            {
+                                c[zz].vinte++;
+                                c[zz].punti += 3;
+                            }
+                            if (p[w].squadra2 == c[zz].squadra)
+                            {
+                                c[zz].perse++;
+
+                            }
+                        }
+                    }
+                    if (p[w].risultato1 < p[w].risultato2)
+                    {
+                        for (int zz = 0; zz < 20; zz++)
+                        {
+                            if (p[w].squadra2 == c[zz].squadra)
+                            {
+                                c[zz].vinte++;
+                                c[zz].punti += 3;
+                            }
+                            if (p[w].squadra1 == c[zz].squadra)
+                            {
+                                c[zz].perse++;
+                            }
+                        }
+                    }
+                    if (p[w].risultato1 == p[w].risultato2)
+                    {
+                        for (int zz = 0; zz < 20; zz++)
+                        {
+                            if (p[w].squadra1 == c[zz].squadra)
+                            {
+                                c[zz].pareggiate++;
+                                c[zz].punti += 1;
+                            }
+                            if (p[w].squadra2 == c[zz].squadra)
+                            {
+                                c[zz].pareggiate++;
+                                c[zz].punti += 1;
+                            }
+                        }
+                    }
+                
+
+                w = w + 1;
+            }
 
 
         }
@@ -540,30 +611,41 @@ namespace SerieA20_21
 
                     //Add a new Legend(if needed) and do some formating
                     chart2.Legends.Add("Partite Vinte");
+                    chart2.Legends.Add("Partite Perse");
+                    chart2.Legends.Add("Partite Pareggiate");
                     chart2.Legends[0].LegendStyle = LegendStyle.Table;
                     chart2.Legends[0].Docking = Docking.Bottom;
                     chart2.Legends[0].Alignment = StringAlignment.Center;
                     chart2.Legends[0].Title = "Partite";
                     chart2.Legends[0].BorderColor = Color.Black;
-
+                    
+                  
                     //Add a new chart-series
                     string seriesname = "pVinte";
 
 
                     chart2.Series.Add(seriesname);
+                    
 
                     //set the chart-type to "Pie"
                     chart2.Series[seriesname].ChartType = SeriesChartType.Pie;
                     chart2.Series[seriesname].Palette= ChartColorPalette.Pastel;
                     //Add some datapoints so the series. in this case you can pass the values to this method
-                    chart2.Series[seriesname].Points.Add(c[xx].vinte);
-                    chart2.Series[seriesname].Points.Add(c[xx].perse);
-                    chart2.Series[seriesname].Points.Add(c[xx].pareggiate);
+
+                    chart2.Series[seriesname].Points.AddXY($"V {c[xx].vinte}", c[xx].vinte);
+                    chart2.Series[seriesname].Points.AddXY($"P {c[xx].perse}", c[xx].perse);
+                    chart2.Series[seriesname].Points.AddXY($"X {c[xx].pareggiate}", c[xx].pareggiate);
 
 
-
-
-
+                    decimal vi=0;
+                    decimal pe = 0;
+                    decimal pa = 0;
+                    vi = c[xx].vinte * 100 / p[num-1].giornata;
+                    pe = c[xx].perse * 100 / p[num - 1].giornata;
+                    pa = c[xx].pareggiate * 100 / p[num - 1].giornata;
+                    graf_vinte.Percentage = (int)vi ;
+                    graf_perse.Percentage = (int)pe;
+                    graf_pareggiate.Percentage = (int)pa;
                 }
                 xx = xx + 1;
             }

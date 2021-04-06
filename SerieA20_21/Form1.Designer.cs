@@ -33,9 +33,9 @@ namespace SerieA20_21
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -79,6 +79,7 @@ namespace SerieA20_21
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cbo_squadra = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -91,7 +92,12 @@ namespace SerieA20_21
             this.btn_inserimento = new XanderUI.XUIButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graf_perse = new XanderUI.XUICircleProgressBar();
+            this.graf_pareggiate = new XanderUI.XUICircleProgressBar();
+            this.graf_vinte = new XanderUI.XUICircleProgressBar();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -105,10 +111,10 @@ namespace SerieA20_21
             this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -222,6 +228,7 @@ namespace SerieA20_21
             // 
             // cbo_inserimento
             // 
+            this.cbo_inserimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_inserimento.FormattingEnabled = true;
             this.cbo_inserimento.Location = new System.Drawing.Point(169, 14);
             this.cbo_inserimento.Name = "cbo_inserimento";
@@ -490,6 +497,7 @@ namespace SerieA20_21
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(498, 3);
             this.comboBox1.Name = "comboBox1";
@@ -507,6 +515,12 @@ namespace SerieA20_21
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.graf_vinte);
+            this.tabPage3.Controls.Add(this.graf_pareggiate);
+            this.tabPage3.Controls.Add(this.graf_perse);
             this.tabPage3.Controls.Add(this.chart2);
             this.tabPage3.Controls.Add(this.chart1);
             this.tabPage3.Controls.Add(this.cbo_squadra);
@@ -515,27 +529,44 @@ namespace SerieA20_21
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1113, 573);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Classifica";
+            this.tabPage3.Text = "Statistiche";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // chart2
             // 
             chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            this.chart2.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(8, 71);
-            this.chart1.Name = "chart1";
+            this.chart2.Legends.Add(legend3);
+            this.chart2.Location = new System.Drawing.Point(8, 330);
+            this.chart2.Name = "chart2";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            this.chart2.Series.Add(series3);
+            this.chart2.Size = new System.Drawing.Size(469, 235);
+            this.chart2.TabIndex = 5;
+            this.chart2.Text = "chart2";
+            // 
+            // chart1
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(8, 71);
+            this.chart1.Name = "chart1";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(1097, 253);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
             // cbo_squadra
             // 
+            this.cbo_squadra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_squadra.FormattingEnabled = true;
             this.cbo_squadra.Location = new System.Drawing.Point(483, 14);
             this.cbo_squadra.Name = "cbo_squadra";
@@ -706,21 +737,89 @@ namespace SerieA20_21
             this.label1.TabIndex = 0;
             this.label1.Text = "Serie A - Campionato 2020/2021";
             // 
-            // chart2
+            // graf_perse
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(8, 330);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(469, 235);
-            this.chart2.TabIndex = 5;
-            this.chart2.Text = "chart2";
+            this.graf_perse.AnimationSpeed = 5;
+            this.graf_perse.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_perse.FilledColorAlpha = 130;
+            this.graf_perse.FilledThickness = 40;
+            this.graf_perse.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_perse.IsAnimated = false;
+            this.graf_perse.Location = new System.Drawing.Point(621, 373);
+            this.graf_perse.Name = "graf_perse";
+            this.graf_perse.Percentage = 63;
+            this.graf_perse.ShowText = true;
+            this.graf_perse.Size = new System.Drawing.Size(132, 177);
+            this.graf_perse.TabIndex = 7;
+            this.graf_perse.TextColor = System.Drawing.Color.Gray;
+            this.graf_perse.TextSize = 14;
+            this.graf_perse.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_perse.UnfilledThickness = 24;
+            // 
+            // graf_pareggiate
+            // 
+            this.graf_pareggiate.AnimationSpeed = 5;
+            this.graf_pareggiate.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_pareggiate.FilledColorAlpha = 130;
+            this.graf_pareggiate.FilledThickness = 40;
+            this.graf_pareggiate.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_pareggiate.IsAnimated = false;
+            this.graf_pareggiate.Location = new System.Drawing.Point(759, 373);
+            this.graf_pareggiate.Name = "graf_pareggiate";
+            this.graf_pareggiate.Percentage = 63;
+            this.graf_pareggiate.ShowText = true;
+            this.graf_pareggiate.Size = new System.Drawing.Size(132, 177);
+            this.graf_pareggiate.TabIndex = 8;
+            this.graf_pareggiate.TextColor = System.Drawing.Color.Gray;
+            this.graf_pareggiate.TextSize = 14;
+            this.graf_pareggiate.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_pareggiate.UnfilledThickness = 24;
+            // 
+            // graf_vinte
+            // 
+            this.graf_vinte.AnimationSpeed = 5;
+            this.graf_vinte.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_vinte.FilledColorAlpha = 130;
+            this.graf_vinte.FilledThickness = 40;
+            this.graf_vinte.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_vinte.IsAnimated = false;
+            this.graf_vinte.Location = new System.Drawing.Point(483, 373);
+            this.graf_vinte.Name = "graf_vinte";
+            this.graf_vinte.Percentage = 63;
+            this.graf_vinte.ShowText = true;
+            this.graf_vinte.Size = new System.Drawing.Size(132, 177);
+            this.graf_vinte.TabIndex = 9;
+            this.graf_vinte.TextColor = System.Drawing.Color.Gray;
+            this.graf_vinte.TextSize = 14;
+            this.graf_vinte.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_vinte.UnfilledThickness = 24;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(522, 342);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 24);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Vinte";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(656, 342);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 24);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Perse";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(775, 342);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 24);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Pareggiate";
             // 
             // Form1
             // 
@@ -749,11 +848,11 @@ namespace SerieA20_21
             this.panel4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -816,6 +915,12 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private XanderUI.XUICircleProgressBar graf_perse;
+        private XanderUI.XUICircleProgressBar graf_vinte;
+        private XanderUI.XUICircleProgressBar graf_pareggiate;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
 
