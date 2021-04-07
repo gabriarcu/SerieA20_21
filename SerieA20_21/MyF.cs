@@ -51,6 +51,26 @@ namespace SerieA20_21
             cla[19].squadra = "Udinese";
             
         }
+        public static void OrdinaClassifica(classifica[] cla)
+        {
+            for (int x=0;x<20;x++)
+            {
+                for (int y = 1; y < 19; y++)
+                {
+                    if(cla[x].punti>cla[y].punti)
+                    {
+                        //cla.OrderByDescending(x1 => x1.punti);
+                        Array.Sort(cla, (x1, y1) => y1.punti.CompareTo(x1.punti));
 
-}
+                        Array.Sort(cla, delegate (classifica bla1, classifica bla2)
+                        {
+                            return bla2.punti.CompareTo(bla1.punti);
+                        });
+
+                    }
+                }
+            }
+        }
+
+    }
 }

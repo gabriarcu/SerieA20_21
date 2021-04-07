@@ -30,12 +30,12 @@ namespace SerieA20_21
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -92,12 +92,20 @@ namespace SerieA20_21
             this.btn_inserimento = new XanderUI.XUIButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.graf_perse = new XanderUI.XUICircleProgressBar();
-            this.graf_pareggiate = new XanderUI.XUICircleProgressBar();
-            this.graf_vinte = new XanderUI.XUICircleProgressBar();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.xuiCard1 = new XanderUI.XUICard();
+            this.xuiCustomGroupbox1 = new XanderUI.XUICustomGroupbox();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.graf_vinte = new XanderUI.XUICircleProgressBar();
+            this.graf_pareggiate = new XanderUI.XUICircleProgressBar();
+            this.graf_perse = new XanderUI.XUICircleProgressBar();
+            this.xuiCustomGroupbox2 = new XanderUI.XUICustomGroupbox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_punti = new System.Windows.Forms.TextBox();
+            this.txt_posizione = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,8 +121,11 @@ namespace SerieA20_21
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.xuiCustomGroupbox1.SuspendLayout();
+            this.xuiCustomGroupbox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -515,12 +526,8 @@ namespace SerieA20_21
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.graf_vinte);
-            this.tabPage3.Controls.Add(this.graf_pareggiate);
-            this.tabPage3.Controls.Add(this.graf_perse);
+            this.tabPage3.Controls.Add(this.xuiCustomGroupbox2);
+            this.tabPage3.Controls.Add(this.xuiCustomGroupbox1);
             this.tabPage3.Controls.Add(this.chart2);
             this.tabPage3.Controls.Add(this.chart1);
             this.tabPage3.Controls.Add(this.cbo_squadra);
@@ -534,32 +541,32 @@ namespace SerieA20_21
             // 
             // chart2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(8, 330);
             this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(469, 235);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(8, 71);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1097, 253);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -585,6 +592,7 @@ namespace SerieA20_21
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.xuiCard1);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1113, 573);
@@ -737,43 +745,67 @@ namespace SerieA20_21
             this.label1.TabIndex = 0;
             this.label1.Text = "Serie A - Campionato 2020/2021";
             // 
-            // graf_perse
+            // xuiCard1
             // 
-            this.graf_perse.AnimationSpeed = 5;
-            this.graf_perse.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.graf_perse.FilledColorAlpha = 130;
-            this.graf_perse.FilledThickness = 40;
-            this.graf_perse.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graf_perse.IsAnimated = false;
-            this.graf_perse.Location = new System.Drawing.Point(621, 373);
-            this.graf_perse.Name = "graf_perse";
-            this.graf_perse.Percentage = 63;
-            this.graf_perse.ShowText = true;
-            this.graf_perse.Size = new System.Drawing.Size(132, 177);
-            this.graf_perse.TabIndex = 7;
-            this.graf_perse.TextColor = System.Drawing.Color.Gray;
-            this.graf_perse.TextSize = 14;
-            this.graf_perse.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.graf_perse.UnfilledThickness = 24;
+            this.xuiCard1.BackColor = System.Drawing.Color.Transparent;
+            this.xuiCard1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.xuiCard1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.xuiCard1.ForeColor = System.Drawing.Color.White;
+            this.xuiCard1.Location = new System.Drawing.Point(154, 93);
+            this.xuiCard1.Name = "xuiCard1";
+            this.xuiCard1.Size = new System.Drawing.Size(406, 230);
+            this.xuiCard1.TabIndex = 0;
+            this.xuiCard1.Text = "xuiCard1";
+            this.xuiCard1.Text1 = "Savings Card";
+            this.xuiCard1.Text2 = "1234 5678 9101 1121";
+            this.xuiCard1.Text3 = "Exp: 01/02 - 03/04";
             // 
-            // graf_pareggiate
+            // xuiCustomGroupbox1
             // 
-            this.graf_pareggiate.AnimationSpeed = 5;
-            this.graf_pareggiate.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.graf_pareggiate.FilledColorAlpha = 130;
-            this.graf_pareggiate.FilledThickness = 40;
-            this.graf_pareggiate.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graf_pareggiate.IsAnimated = false;
-            this.graf_pareggiate.Location = new System.Drawing.Point(759, 373);
-            this.graf_pareggiate.Name = "graf_pareggiate";
-            this.graf_pareggiate.Percentage = 63;
-            this.graf_pareggiate.ShowText = true;
-            this.graf_pareggiate.Size = new System.Drawing.Size(132, 177);
-            this.graf_pareggiate.TabIndex = 8;
-            this.graf_pareggiate.TextColor = System.Drawing.Color.Gray;
-            this.graf_pareggiate.TextSize = 14;
-            this.graf_pareggiate.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.graf_pareggiate.UnfilledThickness = 24;
+            this.xuiCustomGroupbox1.BackColor = System.Drawing.Color.White;
+            this.xuiCustomGroupbox1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiCustomGroupbox1.BorderWidth = 1;
+            this.xuiCustomGroupbox1.Controls.Add(this.label12);
+            this.xuiCustomGroupbox1.Controls.Add(this.label11);
+            this.xuiCustomGroupbox1.Controls.Add(this.label10);
+            this.xuiCustomGroupbox1.Controls.Add(this.graf_vinte);
+            this.xuiCustomGroupbox1.Controls.Add(this.graf_pareggiate);
+            this.xuiCustomGroupbox1.Controls.Add(this.graf_perse);
+            this.xuiCustomGroupbox1.Location = new System.Drawing.Point(483, 329);
+            this.xuiCustomGroupbox1.Name = "xuiCustomGroupbox1";
+            this.xuiCustomGroupbox1.ShowText = true;
+            this.xuiCustomGroupbox1.Size = new System.Drawing.Size(437, 236);
+            this.xuiCustomGroupbox1.TabIndex = 6;
+            this.xuiCustomGroupbox1.TabStop = false;
+            this.xuiCustomGroupbox1.Text = "Percentuale";
+            this.xuiCustomGroupbox1.TextColor = System.Drawing.Color.DodgerBlue;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(304, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 24);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Pareggiate";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(185, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 24);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Perse";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 24);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Vinte";
             // 
             // graf_vinte
             // 
@@ -783,43 +815,118 @@ namespace SerieA20_21
             this.graf_vinte.FilledThickness = 40;
             this.graf_vinte.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.graf_vinte.IsAnimated = false;
-            this.graf_vinte.Location = new System.Drawing.Point(483, 373);
+            this.graf_vinte.Location = new System.Drawing.Point(12, 53);
             this.graf_vinte.Name = "graf_vinte";
             this.graf_vinte.Percentage = 63;
             this.graf_vinte.ShowText = true;
             this.graf_vinte.Size = new System.Drawing.Size(132, 177);
-            this.graf_vinte.TabIndex = 9;
+            this.graf_vinte.TabIndex = 15;
             this.graf_vinte.TextColor = System.Drawing.Color.Gray;
             this.graf_vinte.TextSize = 14;
             this.graf_vinte.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
             this.graf_vinte.UnfilledThickness = 24;
             // 
-            // label10
+            // graf_pareggiate
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(522, 342);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 24);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Vinte";
+            this.graf_pareggiate.AnimationSpeed = 5;
+            this.graf_pareggiate.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_pareggiate.FilledColorAlpha = 130;
+            this.graf_pareggiate.FilledThickness = 40;
+            this.graf_pareggiate.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_pareggiate.IsAnimated = false;
+            this.graf_pareggiate.Location = new System.Drawing.Point(288, 53);
+            this.graf_pareggiate.Name = "graf_pareggiate";
+            this.graf_pareggiate.Percentage = 63;
+            this.graf_pareggiate.ShowText = true;
+            this.graf_pareggiate.Size = new System.Drawing.Size(132, 177);
+            this.graf_pareggiate.TabIndex = 14;
+            this.graf_pareggiate.TextColor = System.Drawing.Color.Gray;
+            this.graf_pareggiate.TextSize = 14;
+            this.graf_pareggiate.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_pareggiate.UnfilledThickness = 24;
             // 
-            // label11
+            // graf_perse
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(656, 342);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 24);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Perse";
+            this.graf_perse.AnimationSpeed = 5;
+            this.graf_perse.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_perse.FilledColorAlpha = 130;
+            this.graf_perse.FilledThickness = 40;
+            this.graf_perse.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_perse.IsAnimated = false;
+            this.graf_perse.Location = new System.Drawing.Point(150, 53);
+            this.graf_perse.Name = "graf_perse";
+            this.graf_perse.Percentage = 63;
+            this.graf_perse.ShowText = true;
+            this.graf_perse.Size = new System.Drawing.Size(132, 177);
+            this.graf_perse.TabIndex = 13;
+            this.graf_perse.TextColor = System.Drawing.Color.Gray;
+            this.graf_perse.TextSize = 14;
+            this.graf_perse.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_perse.UnfilledThickness = 24;
             // 
-            // label12
+            // xuiCustomGroupbox2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(775, 342);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 24);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Pareggiate";
+            this.xuiCustomGroupbox2.BackColor = System.Drawing.Color.White;
+            this.xuiCustomGroupbox2.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiCustomGroupbox2.BorderWidth = 1;
+            this.xuiCustomGroupbox2.Controls.Add(this.txt_posizione);
+            this.xuiCustomGroupbox2.Controls.Add(this.txt_punti);
+            this.xuiCustomGroupbox2.Controls.Add(this.label15);
+            this.xuiCustomGroupbox2.Controls.Add(this.label14);
+            this.xuiCustomGroupbox2.Controls.Add(this.label13);
+            this.xuiCustomGroupbox2.Location = new System.Drawing.Point(926, 330);
+            this.xuiCustomGroupbox2.Name = "xuiCustomGroupbox2";
+            this.xuiCustomGroupbox2.ShowText = true;
+            this.xuiCustomGroupbox2.Size = new System.Drawing.Size(179, 236);
+            this.xuiCustomGroupbox2.TabIndex = 8;
+            this.xuiCustomGroupbox2.TabStop = false;
+            this.xuiCustomGroupbox2.Text = "Classifica";
+            this.xuiCustomGroupbox2.TextColor = System.Drawing.Color.DodgerBlue;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 24);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Punti";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 108);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 24);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Posizione";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 132);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 24);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "In classifica";
+            // 
+            // txt_punti
+            // 
+            this.txt_punti.Location = new System.Drawing.Point(113, 49);
+            this.txt_punti.Name = "txt_punti";
+            this.txt_punti.ReadOnly = true;
+            this.txt_punti.Size = new System.Drawing.Size(51, 31);
+            this.txt_punti.TabIndex = 23;
+            this.txt_punti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_posizione
+            // 
+            this.txt_posizione.Location = new System.Drawing.Point(113, 118);
+            this.txt_posizione.Name = "txt_posizione";
+            this.txt_posizione.ReadOnly = true;
+            this.txt_posizione.Size = new System.Drawing.Size(51, 31);
+            this.txt_posizione.TabIndex = 24;
+            this.txt_posizione.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -839,9 +946,7 @@ namespace SerieA20_21
             this.tabPage5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.box_classifica.ResumeLayout(false);
-            this.box_classifica.PerformLayout();
             this.box_partite.ResumeLayout(false);
-            this.box_partite.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -850,9 +955,14 @@ namespace SerieA20_21
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.xuiCustomGroupbox1.ResumeLayout(false);
+            this.xuiCustomGroupbox1.PerformLayout();
+            this.xuiCustomGroupbox2.ResumeLayout(false);
+            this.xuiCustomGroupbox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -915,12 +1025,20 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private XanderUI.XUICircleProgressBar graf_perse;
-        private XanderUI.XUICircleProgressBar graf_vinte;
-        private XanderUI.XUICircleProgressBar graf_pareggiate;
+        private XanderUI.XUICard xuiCard1;
+        private XanderUI.XUICustomGroupbox xuiCustomGroupbox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private XanderUI.XUICircleProgressBar graf_vinte;
+        private XanderUI.XUICircleProgressBar graf_pareggiate;
+        private XanderUI.XUICircleProgressBar graf_perse;
+        private XanderUI.XUICustomGroupbox xuiCustomGroupbox2;
+        private System.Windows.Forms.TextBox txt_posizione;
+        private System.Windows.Forms.TextBox txt_punti;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
 

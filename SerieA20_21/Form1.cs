@@ -182,6 +182,7 @@ namespace SerieA20_21
             graf_vinte.percentage = 0;
             graf_perse.percentage = 0;
             graf_pareggiate.percentage = 0;
+            
 
             int w = 0;
 
@@ -357,7 +358,7 @@ namespace SerieA20_21
 
 
             int z = 0;
-
+            MyF.OrdinaClassifica(c);
             ListViewItem Riga3;
             listView3.Items.Clear();
 
@@ -572,9 +573,9 @@ namespace SerieA20_21
             string selezione = cbo_squadra.SelectedItem.ToString();
             int x = 0;
             chart1.Series.Clear();
-            string seriesName = "Gol" + selezione;
+            string seriesName = "Gol per giornata";
             Series ser = new Series(seriesName);
-            ser.Name = seriesName;
+            //ser.Name = seriesName;
             ser.ChartType = SeriesChartType.Column;
             ser.Palette = ChartColorPalette.Pastel;
             chart1.ChartAreas[0].AxisX.Minimum = 0;
@@ -599,8 +600,8 @@ namespace SerieA20_21
 
 
             int xx = 0;
-            
 
+            MyF.OrdinaClassifica(c);
 
             while (xx <20)
             {
@@ -625,7 +626,7 @@ namespace SerieA20_21
 
 
                     chart2.Series.Add(seriesname);
-                    
+                    chart2.ChartAreas[0].Area3DStyle.Enable3D = true;
 
                     //set the chart-type to "Pie"
                     chart2.Series[seriesname].ChartType = SeriesChartType.Pie;
@@ -646,6 +647,13 @@ namespace SerieA20_21
                     graf_vinte.Percentage = (int)vi ;
                     graf_perse.Percentage = (int)pe;
                     graf_pareggiate.Percentage = (int)pa;
+
+                    txt_punti.Text = c[xx].punti.ToString();
+
+                    txt_posizione.Text = (xx+1).ToString();
+                    
+
+
                 }
                 xx = xx + 1;
             }
