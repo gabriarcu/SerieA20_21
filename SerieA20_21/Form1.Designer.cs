@@ -79,11 +79,25 @@ namespace SerieA20_21
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.xuiCustomGroupbox2 = new XanderUI.XUICustomGroupbox();
+            this.txt_posizione = new System.Windows.Forms.TextBox();
+            this.txt_punti = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.xuiCustomGroupbox1 = new XanderUI.XUICustomGroupbox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.graf_vinte = new XanderUI.XUICircleProgressBar();
+            this.graf_pareggiate = new XanderUI.XUICircleProgressBar();
+            this.graf_perse = new XanderUI.XUICircleProgressBar();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cbo_squadra = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.xuiCard1 = new XanderUI.XUICard();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_esci = new XanderUI.XUIButton();
             this.btn_statistiche = new XanderUI.XUIButton();
@@ -92,20 +106,7 @@ namespace SerieA20_21
             this.btn_inserimento = new XanderUI.XUIButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.xuiCard1 = new XanderUI.XUICard();
-            this.xuiCustomGroupbox1 = new XanderUI.XUICustomGroupbox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.graf_vinte = new XanderUI.XUICircleProgressBar();
-            this.graf_pareggiate = new XanderUI.XUICircleProgressBar();
-            this.graf_perse = new XanderUI.XUICircleProgressBar();
-            this.xuiCustomGroupbox2 = new XanderUI.XUICustomGroupbox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_punti = new System.Windows.Forms.TextBox();
-            this.txt_posizione = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -119,13 +120,13 @@ namespace SerieA20_21
             this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.xuiCustomGroupbox2.SuspendLayout();
+            this.xuiCustomGroupbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.xuiCustomGroupbox1.SuspendLayout();
-            this.xuiCustomGroupbox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -168,6 +169,7 @@ namespace SerieA20_21
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.label6);
@@ -539,6 +541,174 @@ namespace SerieA20_21
             this.tabPage3.Text = "Statistiche";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // xuiCustomGroupbox2
+            // 
+            this.xuiCustomGroupbox2.BackColor = System.Drawing.Color.White;
+            this.xuiCustomGroupbox2.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiCustomGroupbox2.BorderWidth = 1;
+            this.xuiCustomGroupbox2.Controls.Add(this.txt_posizione);
+            this.xuiCustomGroupbox2.Controls.Add(this.txt_punti);
+            this.xuiCustomGroupbox2.Controls.Add(this.label15);
+            this.xuiCustomGroupbox2.Controls.Add(this.label14);
+            this.xuiCustomGroupbox2.Controls.Add(this.label13);
+            this.xuiCustomGroupbox2.Location = new System.Drawing.Point(926, 330);
+            this.xuiCustomGroupbox2.Name = "xuiCustomGroupbox2";
+            this.xuiCustomGroupbox2.ShowText = true;
+            this.xuiCustomGroupbox2.Size = new System.Drawing.Size(179, 236);
+            this.xuiCustomGroupbox2.TabIndex = 8;
+            this.xuiCustomGroupbox2.TabStop = false;
+            this.xuiCustomGroupbox2.Text = "Classifica";
+            this.xuiCustomGroupbox2.TextColor = System.Drawing.Color.DodgerBlue;
+            // 
+            // txt_posizione
+            // 
+            this.txt_posizione.Location = new System.Drawing.Point(113, 118);
+            this.txt_posizione.Name = "txt_posizione";
+            this.txt_posizione.ReadOnly = true;
+            this.txt_posizione.Size = new System.Drawing.Size(51, 31);
+            this.txt_posizione.TabIndex = 24;
+            this.txt_posizione.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_punti
+            // 
+            this.txt_punti.Location = new System.Drawing.Point(113, 49);
+            this.txt_punti.Name = "txt_punti";
+            this.txt_punti.ReadOnly = true;
+            this.txt_punti.Size = new System.Drawing.Size(51, 31);
+            this.txt_punti.TabIndex = 23;
+            this.txt_punti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 132);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 24);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "In classifica";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 108);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 24);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Posizione";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 24);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Punti";
+            // 
+            // xuiCustomGroupbox1
+            // 
+            this.xuiCustomGroupbox1.BackColor = System.Drawing.Color.White;
+            this.xuiCustomGroupbox1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiCustomGroupbox1.BorderWidth = 1;
+            this.xuiCustomGroupbox1.Controls.Add(this.label12);
+            this.xuiCustomGroupbox1.Controls.Add(this.label11);
+            this.xuiCustomGroupbox1.Controls.Add(this.label10);
+            this.xuiCustomGroupbox1.Controls.Add(this.graf_vinte);
+            this.xuiCustomGroupbox1.Controls.Add(this.graf_pareggiate);
+            this.xuiCustomGroupbox1.Controls.Add(this.graf_perse);
+            this.xuiCustomGroupbox1.Location = new System.Drawing.Point(483, 329);
+            this.xuiCustomGroupbox1.Name = "xuiCustomGroupbox1";
+            this.xuiCustomGroupbox1.ShowText = true;
+            this.xuiCustomGroupbox1.Size = new System.Drawing.Size(437, 236);
+            this.xuiCustomGroupbox1.TabIndex = 6;
+            this.xuiCustomGroupbox1.TabStop = false;
+            this.xuiCustomGroupbox1.Text = "Percentuale";
+            this.xuiCustomGroupbox1.TextColor = System.Drawing.Color.DodgerBlue;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(304, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 24);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Pareggiate";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(185, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 24);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Perse";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 24);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Vinte";
+            // 
+            // graf_vinte
+            // 
+            this.graf_vinte.AnimationSpeed = 5;
+            this.graf_vinte.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_vinte.FilledColorAlpha = 130;
+            this.graf_vinte.FilledThickness = 40;
+            this.graf_vinte.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_vinte.IsAnimated = false;
+            this.graf_vinte.Location = new System.Drawing.Point(12, 53);
+            this.graf_vinte.Name = "graf_vinte";
+            this.graf_vinte.Percentage = 63;
+            this.graf_vinte.ShowText = true;
+            this.graf_vinte.Size = new System.Drawing.Size(132, 177);
+            this.graf_vinte.TabIndex = 15;
+            this.graf_vinte.TextColor = System.Drawing.Color.Gray;
+            this.graf_vinte.TextSize = 14;
+            this.graf_vinte.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_vinte.UnfilledThickness = 24;
+            // 
+            // graf_pareggiate
+            // 
+            this.graf_pareggiate.AnimationSpeed = 5;
+            this.graf_pareggiate.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_pareggiate.FilledColorAlpha = 130;
+            this.graf_pareggiate.FilledThickness = 40;
+            this.graf_pareggiate.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_pareggiate.IsAnimated = false;
+            this.graf_pareggiate.Location = new System.Drawing.Point(288, 53);
+            this.graf_pareggiate.Name = "graf_pareggiate";
+            this.graf_pareggiate.Percentage = 63;
+            this.graf_pareggiate.ShowText = true;
+            this.graf_pareggiate.Size = new System.Drawing.Size(132, 177);
+            this.graf_pareggiate.TabIndex = 14;
+            this.graf_pareggiate.TextColor = System.Drawing.Color.Gray;
+            this.graf_pareggiate.TextSize = 14;
+            this.graf_pareggiate.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_pareggiate.UnfilledThickness = 24;
+            // 
+            // graf_perse
+            // 
+            this.graf_perse.AnimationSpeed = 5;
+            this.graf_perse.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
+            this.graf_perse.FilledColorAlpha = 130;
+            this.graf_perse.FilledThickness = 40;
+            this.graf_perse.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graf_perse.IsAnimated = false;
+            this.graf_perse.Location = new System.Drawing.Point(150, 53);
+            this.graf_perse.Name = "graf_perse";
+            this.graf_perse.Percentage = 63;
+            this.graf_perse.ShowText = true;
+            this.graf_perse.Size = new System.Drawing.Size(132, 177);
+            this.graf_perse.TabIndex = 13;
+            this.graf_perse.TextColor = System.Drawing.Color.Gray;
+            this.graf_perse.TextSize = 14;
+            this.graf_perse.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.graf_perse.UnfilledThickness = 24;
+            // 
             // chart2
             // 
             chartArea1.Name = "ChartArea1";
@@ -599,6 +769,21 @@ namespace SerieA20_21
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "SquadraMaxGol";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // xuiCard1
+            // 
+            this.xuiCard1.BackColor = System.Drawing.Color.Transparent;
+            this.xuiCard1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.xuiCard1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.xuiCard1.ForeColor = System.Drawing.Color.White;
+            this.xuiCard1.Location = new System.Drawing.Point(154, 93);
+            this.xuiCard1.Name = "xuiCard1";
+            this.xuiCard1.Size = new System.Drawing.Size(406, 230);
+            this.xuiCard1.TabIndex = 0;
+            this.xuiCard1.Text = "xuiCard1";
+            this.xuiCard1.Text1 = "Savings Card";
+            this.xuiCard1.Text2 = "1234 5678 9101 1121";
+            this.xuiCard1.Text3 = "Exp: 01/02 - 03/04";
             // 
             // panel2
             // 
@@ -745,188 +930,14 @@ namespace SerieA20_21
             this.label1.TabIndex = 0;
             this.label1.Text = "Serie A - Campionato 2020/2021";
             // 
-            // xuiCard1
+            // label16
             // 
-            this.xuiCard1.BackColor = System.Drawing.Color.Transparent;
-            this.xuiCard1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
-            this.xuiCard1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
-            this.xuiCard1.ForeColor = System.Drawing.Color.White;
-            this.xuiCard1.Location = new System.Drawing.Point(154, 93);
-            this.xuiCard1.Name = "xuiCard1";
-            this.xuiCard1.Size = new System.Drawing.Size(406, 230);
-            this.xuiCard1.TabIndex = 0;
-            this.xuiCard1.Text = "xuiCard1";
-            this.xuiCard1.Text1 = "Savings Card";
-            this.xuiCard1.Text2 = "1234 5678 9101 1121";
-            this.xuiCard1.Text3 = "Exp: 01/02 - 03/04";
-            // 
-            // xuiCustomGroupbox1
-            // 
-            this.xuiCustomGroupbox1.BackColor = System.Drawing.Color.White;
-            this.xuiCustomGroupbox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.xuiCustomGroupbox1.BorderWidth = 1;
-            this.xuiCustomGroupbox1.Controls.Add(this.label12);
-            this.xuiCustomGroupbox1.Controls.Add(this.label11);
-            this.xuiCustomGroupbox1.Controls.Add(this.label10);
-            this.xuiCustomGroupbox1.Controls.Add(this.graf_vinte);
-            this.xuiCustomGroupbox1.Controls.Add(this.graf_pareggiate);
-            this.xuiCustomGroupbox1.Controls.Add(this.graf_perse);
-            this.xuiCustomGroupbox1.Location = new System.Drawing.Point(483, 329);
-            this.xuiCustomGroupbox1.Name = "xuiCustomGroupbox1";
-            this.xuiCustomGroupbox1.ShowText = true;
-            this.xuiCustomGroupbox1.Size = new System.Drawing.Size(437, 236);
-            this.xuiCustomGroupbox1.TabIndex = 6;
-            this.xuiCustomGroupbox1.TabStop = false;
-            this.xuiCustomGroupbox1.Text = "Percentuale";
-            this.xuiCustomGroupbox1.TextColor = System.Drawing.Color.DodgerBlue;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(304, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 24);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Pareggiate";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(185, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 24);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Perse";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 24);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Vinte";
-            // 
-            // graf_vinte
-            // 
-            this.graf_vinte.AnimationSpeed = 5;
-            this.graf_vinte.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.graf_vinte.FilledColorAlpha = 130;
-            this.graf_vinte.FilledThickness = 40;
-            this.graf_vinte.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graf_vinte.IsAnimated = false;
-            this.graf_vinte.Location = new System.Drawing.Point(12, 53);
-            this.graf_vinte.Name = "graf_vinte";
-            this.graf_vinte.Percentage = 63;
-            this.graf_vinte.ShowText = true;
-            this.graf_vinte.Size = new System.Drawing.Size(132, 177);
-            this.graf_vinte.TabIndex = 15;
-            this.graf_vinte.TextColor = System.Drawing.Color.Gray;
-            this.graf_vinte.TextSize = 14;
-            this.graf_vinte.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.graf_vinte.UnfilledThickness = 24;
-            // 
-            // graf_pareggiate
-            // 
-            this.graf_pareggiate.AnimationSpeed = 5;
-            this.graf_pareggiate.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.graf_pareggiate.FilledColorAlpha = 130;
-            this.graf_pareggiate.FilledThickness = 40;
-            this.graf_pareggiate.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graf_pareggiate.IsAnimated = false;
-            this.graf_pareggiate.Location = new System.Drawing.Point(288, 53);
-            this.graf_pareggiate.Name = "graf_pareggiate";
-            this.graf_pareggiate.Percentage = 63;
-            this.graf_pareggiate.ShowText = true;
-            this.graf_pareggiate.Size = new System.Drawing.Size(132, 177);
-            this.graf_pareggiate.TabIndex = 14;
-            this.graf_pareggiate.TextColor = System.Drawing.Color.Gray;
-            this.graf_pareggiate.TextSize = 14;
-            this.graf_pareggiate.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.graf_pareggiate.UnfilledThickness = 24;
-            // 
-            // graf_perse
-            // 
-            this.graf_perse.AnimationSpeed = 5;
-            this.graf_perse.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.graf_perse.FilledColorAlpha = 130;
-            this.graf_perse.FilledThickness = 40;
-            this.graf_perse.Font = new System.Drawing.Font("Poor Richard", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graf_perse.IsAnimated = false;
-            this.graf_perse.Location = new System.Drawing.Point(150, 53);
-            this.graf_perse.Name = "graf_perse";
-            this.graf_perse.Percentage = 63;
-            this.graf_perse.ShowText = true;
-            this.graf_perse.Size = new System.Drawing.Size(132, 177);
-            this.graf_perse.TabIndex = 13;
-            this.graf_perse.TextColor = System.Drawing.Color.Gray;
-            this.graf_perse.TextSize = 14;
-            this.graf_perse.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
-            this.graf_perse.UnfilledThickness = 24;
-            // 
-            // xuiCustomGroupbox2
-            // 
-            this.xuiCustomGroupbox2.BackColor = System.Drawing.Color.White;
-            this.xuiCustomGroupbox2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.xuiCustomGroupbox2.BorderWidth = 1;
-            this.xuiCustomGroupbox2.Controls.Add(this.txt_posizione);
-            this.xuiCustomGroupbox2.Controls.Add(this.txt_punti);
-            this.xuiCustomGroupbox2.Controls.Add(this.label15);
-            this.xuiCustomGroupbox2.Controls.Add(this.label14);
-            this.xuiCustomGroupbox2.Controls.Add(this.label13);
-            this.xuiCustomGroupbox2.Location = new System.Drawing.Point(926, 330);
-            this.xuiCustomGroupbox2.Name = "xuiCustomGroupbox2";
-            this.xuiCustomGroupbox2.ShowText = true;
-            this.xuiCustomGroupbox2.Size = new System.Drawing.Size(179, 236);
-            this.xuiCustomGroupbox2.TabIndex = 8;
-            this.xuiCustomGroupbox2.TabStop = false;
-            this.xuiCustomGroupbox2.Text = "Classifica";
-            this.xuiCustomGroupbox2.TextColor = System.Drawing.Color.DodgerBlue;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 52);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 24);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Punti";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(7, 108);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 24);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Posizione";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 132);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 24);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "In classifica";
-            // 
-            // txt_punti
-            // 
-            this.txt_punti.Location = new System.Drawing.Point(113, 49);
-            this.txt_punti.Name = "txt_punti";
-            this.txt_punti.ReadOnly = true;
-            this.txt_punti.Size = new System.Drawing.Size(51, 31);
-            this.txt_punti.TabIndex = 23;
-            this.txt_punti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_posizione
-            // 
-            this.txt_posizione.Location = new System.Drawing.Point(113, 118);
-            this.txt_posizione.Name = "txt_posizione";
-            this.txt_posizione.ReadOnly = true;
-            this.txt_posizione.Size = new System.Drawing.Size(51, 31);
-            this.txt_posizione.TabIndex = 24;
-            this.txt_posizione.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(725, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 24);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "label16";
             // 
             // Form1
             // 
@@ -953,16 +964,16 @@ namespace SerieA20_21
             this.panel4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.xuiCustomGroupbox2.ResumeLayout(false);
+            this.xuiCustomGroupbox2.PerformLayout();
+            this.xuiCustomGroupbox1.ResumeLayout(false);
+            this.xuiCustomGroupbox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.xuiCustomGroupbox1.ResumeLayout(false);
-            this.xuiCustomGroupbox1.PerformLayout();
-            this.xuiCustomGroupbox2.ResumeLayout(false);
-            this.xuiCustomGroupbox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1039,6 +1050,7 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
     }
 }
 

@@ -110,6 +110,13 @@ namespace SerieA20_21
                 cbo_squadra.Items.Add(c[i].squadra);
                 
             }
+            int x = 0;
+            while (x < num2)
+            {
+                if (!cbo_inserimento.Items.Contains($"Giornata {p2[x].giornata}"))
+                    cbo_inserimento.Items.Add($"Giornata {p2[x].giornata}");
+                x = x + 1;
+            }
 
 
 
@@ -450,7 +457,7 @@ namespace SerieA20_21
                     TextBox t5 = new TextBox();
                     t5.Name = $"txt_ris1_{xy + 1}";
                     t5.Location = new Point(937, (cy));
-                    t5.Text = "";
+                    //t5.Text = xy.ToString();
                     t5.AutoSize = false;
                     t5.Width = 50;
                     t5.Height = 31;
@@ -470,7 +477,7 @@ namespace SerieA20_21
                     TextBox t6 = new TextBox();
                     t6.Name = $"txt_ris2_{xy + 1}";
                     t6.Location = new Point(1017, (cy));
-                    t6.Text = "";
+                   // t6.Text = xy.ToString();
                     t6.AutoSize = false;
                     t6.Width = 50;
                     t6.Height = 31;
@@ -480,7 +487,7 @@ namespace SerieA20_21
 
                     cy = cy + 37;
                     tt = tt + 1;
-
+                    
 
                 }
                 xy = xy + 1;
@@ -489,18 +496,24 @@ namespace SerieA20_21
 
         private void btn_salva_Click(object sender, EventArgs e)
         {
-            int yy = 0;
-            while(yy<tt)
+            int yyz = 0;
+            while(yyz<tt)
             {
                 p[num].giornata = int.Parse(txt_giornata.Text);
-                //p[num].dataOra =
-                //p[num].dataOra=
-                //p[num].stadio=
-                //p[num].squadra1=
-                //p[num].squadra2 =
-                //p[num].risultato1=
-                //p[num].risultato2 =
-                yy = yy + 1;
+                
+                p[num].dataOra = DateTime.Parse((this.Controls.Find($"txt_data{yyz+1}",true)[0] as TextBox).Text);
+                p[num].stadio= (this.Controls.Find($"txt_stadio{yyz + 1}", true)[0] as TextBox).Text;
+                p[num].squadra1= (this.Controls.Find($"txt_squadra1_{yyz + 1}", true)[0] as TextBox).Text;
+                p[num].squadra2 = (this.Controls.Find($"txt_squadra2_{yyz + 1}", true)[0] as TextBox).Text;
+
+                TextBox a = this.Controls.Find($"txt_ris1_{yyz + 1}", true)[0] as TextBox;
+                string b = a.Name;
+                int c = int.Parse(a.Text);
+
+                p[num].risultato1 = int.Parse((this.Controls.Find($"txt_ris1_{yyz + 1}", true)[0] as TextBox).Text);
+                p[num].risultato2 = int.Parse((this.Controls.Find($"txt_ris2_{yyz + 1}", true)[0] as TextBox).Text);
+
+                yyz = yyz + 1;
                 num = num + 1;
             }
 
@@ -659,6 +672,11 @@ namespace SerieA20_21
             }
         
 
+        }
+
+        private void txt_ris1_1_Click(object sender, EventArgs e)
+        {
+            label16.Text="1";
         }
     }
 }
