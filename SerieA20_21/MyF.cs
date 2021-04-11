@@ -59,7 +59,7 @@ namespace SerieA20_21
                 {
                     if(cla[x].punti>cla[y].punti)
                     {
-                        //cla.OrderByDescending(x1 => x1.punti);
+                       
                         Array.Sort(cla, (x1, y1) => y1.punti.CompareTo(x1.punti));
 
                         Array.Sort(cla, delegate (classifica bla1, classifica bla2)

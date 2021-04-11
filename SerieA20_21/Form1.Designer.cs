@@ -30,12 +30,12 @@ namespace SerieA20_21
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -99,14 +99,17 @@ namespace SerieA20_21
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.xuiCard1 = new XanderUI.XUICard();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_esci = new XanderUI.XUIButton();
+            this.btm_esci = new XanderUI.XUIButton();
+            this.btn_MiglioriPeggiori = new XanderUI.XUIButton();
             this.btn_statistiche = new XanderUI.XUIButton();
             this.btn_elencoGiornata = new XanderUI.XUIButton();
             this.btn_partiteGiocate = new XanderUI.XUIButton();
             this.btn_inserimento = new XanderUI.XUIButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.xuiCard2 = new XanderUI.XUICard();
+            this.xuiCard3 = new XanderUI.XUICard();
+            this.xuiCard4 = new XanderUI.XUICard();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -138,7 +141,7 @@ namespace SerieA20_21
             this.panel1.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1121, 723);
+            this.panel1.Size = new System.Drawing.Size(1148, 723);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -152,7 +155,7 @@ namespace SerieA20_21
             this.tabControl1.Location = new System.Drawing.Point(0, 113);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1121, 610);
+            this.tabControl1.Size = new System.Drawing.Size(1148, 610);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -162,14 +165,13 @@ namespace SerieA20_21
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1113, 573);
+            this.tabPage1.Size = new System.Drawing.Size(1140, 573);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inserimento";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.label6);
@@ -181,7 +183,7 @@ namespace SerieA20_21
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1107, 94);
+            this.panel8.Size = new System.Drawing.Size(1134, 94);
             this.panel8.TabIndex = 1;
             // 
             // label8
@@ -264,7 +266,7 @@ namespace SerieA20_21
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1107, 567);
+            this.panel7.Size = new System.Drawing.Size(1134, 567);
             this.panel7.TabIndex = 0;
             // 
             // btn_salva
@@ -295,7 +297,7 @@ namespace SerieA20_21
             this.tabPage5.Controls.Add(this.panel5);
             this.tabPage5.Location = new System.Drawing.Point(4, 33);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1113, 573);
+            this.tabPage5.Size = new System.Drawing.Size(1140, 573);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Partite per giornata";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -307,7 +309,7 @@ namespace SerieA20_21
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(158, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(955, 573);
+            this.panel6.Size = new System.Drawing.Size(982, 573);
             this.panel6.TabIndex = 1;
             // 
             // box_classifica
@@ -319,7 +321,7 @@ namespace SerieA20_21
             this.box_classifica.Location = new System.Drawing.Point(411, 0);
             this.box_classifica.Name = "box_classifica";
             this.box_classifica.ShowText = true;
-            this.box_classifica.Size = new System.Drawing.Size(544, 573);
+            this.box_classifica.Size = new System.Drawing.Size(571, 573);
             this.box_classifica.TabIndex = 3;
             this.box_classifica.TabStop = false;
             this.box_classifica.Text = "Classifica";
@@ -337,7 +339,7 @@ namespace SerieA20_21
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(3, 27);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(538, 543);
+            this.listView3.Size = new System.Drawing.Size(565, 543);
             this.listView3.TabIndex = 12;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -438,7 +440,7 @@ namespace SerieA20_21
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1113, 573);
+            this.tabPage2.Size = new System.Drawing.Size(1140, 573);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Elenco Partite Giocate";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -458,7 +460,7 @@ namespace SerieA20_21
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 45);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1107, 525);
+            this.listView1.Size = new System.Drawing.Size(1134, 525);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -505,7 +507,7 @@ namespace SerieA20_21
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1107, 42);
+            this.panel4.Size = new System.Drawing.Size(1134, 42);
             this.panel4.TabIndex = 0;
             // 
             // comboBox1
@@ -536,7 +538,7 @@ namespace SerieA20_21
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1113, 573);
+            this.tabPage3.Size = new System.Drawing.Size(1140, 573);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Statistiche";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -711,32 +713,32 @@ namespace SerieA20_21
             // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart2.Legends.Add(legend5);
             this.chart2.Location = new System.Drawing.Point(8, 330);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart2.Series.Add(series5);
             this.chart2.Size = new System.Drawing.Size(469, 235);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(8, 71);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(1097, 253);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -762,10 +764,13 @@ namespace SerieA20_21
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.xuiCard4);
+            this.tabPage4.Controls.Add(this.xuiCard3);
+            this.tabPage4.Controls.Add(this.xuiCard2);
             this.tabPage4.Controls.Add(this.xuiCard1);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1113, 573);
+            this.tabPage4.Size = new System.Drawing.Size(1140, 573);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "SquadraMaxGol";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -776,19 +781,20 @@ namespace SerieA20_21
             this.xuiCard1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
             this.xuiCard1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
             this.xuiCard1.ForeColor = System.Drawing.Color.White;
-            this.xuiCard1.Location = new System.Drawing.Point(154, 93);
+            this.xuiCard1.Location = new System.Drawing.Point(23, 260);
             this.xuiCard1.Name = "xuiCard1";
-            this.xuiCard1.Size = new System.Drawing.Size(406, 230);
+            this.xuiCard1.Size = new System.Drawing.Size(500, 216);
             this.xuiCard1.TabIndex = 0;
             this.xuiCard1.Text = "xuiCard1";
-            this.xuiCard1.Text1 = "Savings Card";
+            this.xuiCard1.Text1 = "Squadra che ha segnato più gol";
             this.xuiCard1.Text2 = "1234 5678 9101 1121";
             this.xuiCard1.Text3 = "Exp: 01/02 - 03/04";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
-            this.panel2.Controls.Add(this.btn_esci);
+            this.panel2.Controls.Add(this.btm_esci);
+            this.panel2.Controls.Add(this.btn_MiglioriPeggiori);
             this.panel2.Controls.Add(this.btn_statistiche);
             this.panel2.Controls.Add(this.btn_elencoGiornata);
             this.panel2.Controls.Add(this.btn_partiteGiocate);
@@ -796,30 +802,52 @@ namespace SerieA20_21
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1121, 49);
+            this.panel2.Size = new System.Drawing.Size(1148, 49);
             this.panel2.TabIndex = 2;
             // 
-            // btn_esci
+            // btm_esci
             // 
-            this.btn_esci.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_esci.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_esci.ButtonImage")));
-            this.btn_esci.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btn_esci.ButtonText = "Esci";
-            this.btn_esci.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btn_esci.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_esci.CornerRadius = 5;
-            this.btn_esci.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_esci.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_esci.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btn_esci.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_esci.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btn_esci.Location = new System.Drawing.Point(808, 0);
-            this.btn_esci.Name = "btn_esci";
-            this.btn_esci.Size = new System.Drawing.Size(168, 49);
-            this.btn_esci.TabIndex = 4;
-            this.btn_esci.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_esci.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_esci.Click += new System.EventHandler(this.btn_esci_Click);
+            this.btm_esci.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btm_esci.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btm_esci.ButtonImage")));
+            this.btm_esci.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btm_esci.ButtonText = "Esci";
+            this.btm_esci.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btm_esci.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btm_esci.CornerRadius = 5;
+            this.btm_esci.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btm_esci.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btm_esci.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btm_esci.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btm_esci.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btm_esci.Location = new System.Drawing.Point(1010, 0);
+            this.btm_esci.Name = "btm_esci";
+            this.btm_esci.Size = new System.Drawing.Size(138, 49);
+            this.btm_esci.TabIndex = 5;
+            this.btm_esci.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btm_esci.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btm_esci.Click += new System.EventHandler(this.btm_esci_Click);
+            // 
+            // btn_MiglioriPeggiori
+            // 
+            this.btn_MiglioriPeggiori.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_MiglioriPeggiori.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_MiglioriPeggiori.ButtonImage")));
+            this.btn_MiglioriPeggiori.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btn_MiglioriPeggiori.ButtonText = "Migliori/Peggiori";
+            this.btn_MiglioriPeggiori.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btn_MiglioriPeggiori.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_MiglioriPeggiori.CornerRadius = 5;
+            this.btn_MiglioriPeggiori.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_MiglioriPeggiori.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_MiglioriPeggiori.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btn_MiglioriPeggiori.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_MiglioriPeggiori.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btn_MiglioriPeggiori.Location = new System.Drawing.Point(808, 0);
+            this.btn_MiglioriPeggiori.Name = "btn_MiglioriPeggiori";
+            this.btn_MiglioriPeggiori.Size = new System.Drawing.Size(202, 49);
+            this.btn_MiglioriPeggiori.TabIndex = 4;
+            this.btn_MiglioriPeggiori.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_MiglioriPeggiori.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_MiglioriPeggiori.Click += new System.EventHandler(this.btn_MiglioriPeggiori_Click);
             // 
             // btn_statistiche
             // 
@@ -916,7 +944,7 @@ namespace SerieA20_21
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1121, 64);
+            this.panel3.Size = new System.Drawing.Size(1148, 64);
             this.panel3.TabIndex = 1;
             // 
             // label1
@@ -930,20 +958,56 @@ namespace SerieA20_21
             this.label1.TabIndex = 0;
             this.label1.Text = "Serie A - Campionato 2020/2021";
             // 
-            // label16
+            // xuiCard2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(725, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 24);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "label16";
+            this.xuiCard2.BackColor = System.Drawing.Color.Transparent;
+            this.xuiCard2.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.xuiCard2.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.xuiCard2.ForeColor = System.Drawing.Color.White;
+            this.xuiCard2.Location = new System.Drawing.Point(632, 260);
+            this.xuiCard2.Name = "xuiCard2";
+            this.xuiCard2.Size = new System.Drawing.Size(500, 216);
+            this.xuiCard2.TabIndex = 1;
+            this.xuiCard2.Text = "xuiCard2";
+            this.xuiCard2.Text1 = "Squadra che ha subito più gol";
+            this.xuiCard2.Text2 = "1234 5678 9101 1121";
+            this.xuiCard2.Text3 = "Exp: 01/02 - 03/04";
+            // 
+            // xuiCard3
+            // 
+            this.xuiCard3.BackColor = System.Drawing.Color.Transparent;
+            this.xuiCard3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.xuiCard3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.xuiCard3.ForeColor = System.Drawing.Color.White;
+            this.xuiCard3.Location = new System.Drawing.Point(23, 17);
+            this.xuiCard3.Name = "xuiCard3";
+            this.xuiCard3.Size = new System.Drawing.Size(396, 216);
+            this.xuiCard3.TabIndex = 2;
+            this.xuiCard3.Text = "xuiCard3";
+            this.xuiCard3.Text1 = "Prima in Classifica";
+            this.xuiCard3.Text2 = "1234 5678 9101 1121";
+            this.xuiCard3.Text3 = "Exp: 01/02 - 03/04";
+            // 
+            // xuiCard4
+            // 
+            this.xuiCard4.BackColor = System.Drawing.Color.Transparent;
+            this.xuiCard4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.xuiCard4.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.xuiCard4.ForeColor = System.Drawing.Color.White;
+            this.xuiCard4.Location = new System.Drawing.Point(436, 17);
+            this.xuiCard4.Name = "xuiCard4";
+            this.xuiCard4.Size = new System.Drawing.Size(696, 216);
+            this.xuiCard4.TabIndex = 3;
+            this.xuiCard4.Text = "xuiCard4";
+            this.xuiCard4.Text1 = "Squadre retrocesse";
+            this.xuiCard4.Text2 = "1234 5678 9101 1121";
+            this.xuiCard4.Text3 = "Exp: 01/02 - 03/04";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 723);
+            this.ClientSize = new System.Drawing.Size(1148, 723);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -985,7 +1049,7 @@ namespace SerieA20_21
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private XanderUI.XUIButton btn_inserimento;
-        private XanderUI.XUIButton btn_esci;
+        private XanderUI.XUIButton btn_MiglioriPeggiori;
         private XanderUI.XUIButton btn_statistiche;
         private XanderUI.XUIButton btn_elencoGiornata;
         private XanderUI.XUIButton btn_partiteGiocate;
@@ -1050,7 +1114,10 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
+        private XanderUI.XUIButton btm_esci;
+        private XanderUI.XUICard xuiCard4;
+        private XanderUI.XUICard xuiCard3;
+        private XanderUI.XUICard xuiCard2;
     }
 }
 

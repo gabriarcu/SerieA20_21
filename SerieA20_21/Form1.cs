@@ -15,8 +15,8 @@ namespace SerieA20_21
 {
     public partial class Form1 : Form
     {
-        public MyF.partita[] p = new MyF.partita[1000];
-        public MyF.partita[] p2 = new MyF.partita[1000];
+        public MyF.partita[] p = new MyF.partita[2000];
+        public MyF.partita[] p2 = new MyF.partita[2000];
         public MyF.classifica[] c = new MyF.classifica[20];
         int num=0;
         int num2 = 0;
@@ -122,10 +122,7 @@ namespace SerieA20_21
 
         }
 
-        private void btn_esci_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void btn_inserimento_Click(object sender, EventArgs e)
         {
@@ -397,21 +394,22 @@ namespace SerieA20_21
         private void cbo_inserimento_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             btn_salva.Visible = true;
-
+            tt = 0;
             string sceltagiornata = cbo_inserimento.SelectedItem.ToString();
             string[] s = sceltagiornata.Split(' ');
             txt_giornata.Text = s[1];
             panel7.Controls.Clear();
             panel7.Controls.Add(btn_salva);
             int xy = 0;
-            int cy = 25;
+            int cy = 100;
+            
             while (xy < num2)
             {
                 if (p2[xy].giornata == int.Parse(txt_giornata.Text))
                 {
 
                     TextBox t1 = new TextBox();
-                    t1.Name = $"txt_data{xy + 1}";
+                    t1.Name = $"txt_data{tt + 1}";
                     t1.Location = new Point(5, (cy));
                     t1.Text = p2[xy].dataOra.ToString("g"); ;
                     t1.AutoSize = false;
@@ -422,7 +420,7 @@ namespace SerieA20_21
                     panel7.Controls.Add(t1);
 
                     TextBox t2 = new TextBox();
-                    t2.Name = $"txt_stadio{xy + 1}";
+                    t2.Name = $"txt_stadio{tt + 1}";
                     t2.Location = new Point(196, (cy));
                     t2.Text = p2[xy].stadio;
                     t2.AutoSize = false;
@@ -433,7 +431,7 @@ namespace SerieA20_21
                     panel7.Controls.Add(t2);
 
                     TextBox t3 = new TextBox();
-                    t3.Name = $"txt_squadra1_{xy + 1}";
+                    t3.Name = $"txt_squadra1_{tt + 1}";
                     t3.Location = new Point(440, (cy));
                     t3.Text = p2[xy].squadra1;
                     t3.AutoSize = false;
@@ -444,7 +442,7 @@ namespace SerieA20_21
                     panel7.Controls.Add(t3);
 
                     TextBox t4 = new TextBox();
-                    t4.Name = $"txt_squadra2_{xy + 1}";
+                    t4.Name = $"txt_squadra2_{tt + 1}";
                     t4.Location = new Point(685, (cy));
                     t4.Text = p2[xy].squadra2;
                     t4.AutoSize = false;
@@ -455,7 +453,7 @@ namespace SerieA20_21
                     panel7.Controls.Add(t4);
 
                     TextBox t5 = new TextBox();
-                    t5.Name = $"txt_ris1_{xy + 1}";
+                    t5.Name = $"txt_ris1_{tt + 1}";
                     t5.Location = new Point(937, (cy));
                     //t5.Text = xy.ToString();
                     t5.AutoSize = false;
@@ -475,9 +473,9 @@ namespace SerieA20_21
                     panel7.Controls.Add(l1);
 
                     TextBox t6 = new TextBox();
-                    t6.Name = $"txt_ris2_{xy + 1}";
+                    t6.Name = $"txt_ris2_{tt + 1}";
                     t6.Location = new Point(1017, (cy));
-                   // t6.Text = xy.ToString();
+                    //t6.Text = xy.ToString();
                     t6.AutoSize = false;
                     t6.Width = 50;
                     t6.Height = 31;
@@ -497,7 +495,7 @@ namespace SerieA20_21
         private void btn_salva_Click(object sender, EventArgs e)
         {
             int yyz = 0;
-            while(yyz<tt)
+            while (yyz<tt)
             {
                 p[num].giornata = int.Parse(txt_giornata.Text);
                 
@@ -505,18 +503,23 @@ namespace SerieA20_21
                 p[num].stadio= (this.Controls.Find($"txt_stadio{yyz + 1}", true)[0] as TextBox).Text;
                 p[num].squadra1= (this.Controls.Find($"txt_squadra1_{yyz + 1}", true)[0] as TextBox).Text;
                 p[num].squadra2 = (this.Controls.Find($"txt_squadra2_{yyz + 1}", true)[0] as TextBox).Text;
-
-                TextBox a = this.Controls.Find($"txt_ris1_{yyz + 1}", true)[0] as TextBox;
-                string b = a.Name;
-                int c = int.Parse(a.Text);
-
-                p[num].risultato1 = int.Parse((this.Controls.Find($"txt_ris1_{yyz + 1}", true)[0] as TextBox).Text);
+                p[num].risultato1 = int.Parse((this.Controls.Find($"txt_ris1_{yyz + 1}", true).FirstOrDefault() as TextBox).Text);
                 p[num].risultato2 = int.Parse((this.Controls.Find($"txt_ris2_{yyz + 1}", true)[0] as TextBox).Text);
+
+                StreamWriter sww = File.AppendText("seriea.csv");
+                //Write a line of text
+                string lineaGiornata = $"{p[num].giornata},{p[num].dataOra},{p[num].stadio},{p[num].squadra1},{p[num].squadra2},{p[num].risultato1},{p[num].risultato2}";
+
+                sww.WriteLine(lineaGiornata);
+
+                //Close the file
+                sww.Close();
+
 
                 yyz = yyz + 1;
                 num = num + 1;
             }
-
+            
             string tempFile = Path.GetTempFileName();
 
             using (var sr = new StreamReader("dagiocare.csv"))
@@ -569,6 +572,10 @@ namespace SerieA20_21
             {
                 MessageBox.Show("Exception: " + e1.Message);
             }
+
+            
+
+
             panel7.Controls.Clear();
             int x = 0;
             cbo_inserimento.Items.Clear();
@@ -674,9 +681,14 @@ namespace SerieA20_21
 
         }
 
-        private void txt_ris1_1_Click(object sender, EventArgs e)
+        private void btm_esci_Click(object sender, EventArgs e)
         {
-            label16.Text="1";
+            this.Close();
+        }
+
+        private void btn_MiglioriPeggiori_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
         }
     }
 }
