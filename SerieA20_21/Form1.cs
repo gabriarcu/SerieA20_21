@@ -688,7 +688,100 @@ namespace SerieA20_21
 
         private void btn_MiglioriPeggiori_Click(object sender, EventArgs e)
         {
+            int w = 0;
+
+            for (int zz = 0; zz < 20; zz++)
+            {
+                c[zz].punti = 0;
+                c[zz].vinte = 0;
+                c[zz].pareggiate = 0;
+                c[zz].perse = 0;
+            }
+
+
+            while (w < num)
+            {
+
+
+                if (p[w].risultato1 > p[w].risultato2)
+                {
+                    for (int zz = 0; zz < 20; zz++)
+                    {
+                        if (p[w].squadra1 == c[zz].squadra)
+                        {
+                            c[zz].vinte++;
+                            c[zz].punti += 3;
+                        }
+                        if (p[w].squadra2 == c[zz].squadra)
+                        {
+                            c[zz].perse++;
+
+                        }
+                        c[zz].gfatti += p[w].risultato1;
+                        c[zz].gsubiti += p[w].risultato2;
+                    }
+                }
+                if (p[w].risultato1 < p[w].risultato2)
+                {
+                    for (int zz = 0; zz < 20; zz++)
+                    {
+                        if (p[w].squadra2 == c[zz].squadra)
+                        {
+                            c[zz].vinte++;
+                            c[zz].punti += 3;
+                        }
+                        if (p[w].squadra1 == c[zz].squadra)
+                        {
+                            c[zz].perse++;
+                        }
+                        c[zz].gfatti += p[w].risultato1;
+                        c[zz].gsubiti += p[w].risultato2;
+                    }
+                }
+                if (p[w].risultato1 == p[w].risultato2)
+                {
+                    for (int zz = 0; zz < 20; zz++)
+                    {
+                        if (p[w].squadra1 == c[zz].squadra)
+                        {
+                            c[zz].pareggiate++;
+                            c[zz].punti += 1;
+                        }
+                        if (p[w].squadra2 == c[zz].squadra)
+                        {
+                            c[zz].pareggiate++;
+                            c[zz].punti += 1;
+                        }
+                        c[zz].gfatti += p[w].risultato1;
+                        c[zz].gsubiti += p[w].risultato2;
+                    }
+                }
+                
+                
+
+                w = w + 1;
+            }
+
             tabControl1.SelectTab(4);
+            MyF.OrdinaClassifica(c);
+
+            //primo in classifica
+            card_primo.Text2 = c[0].squadra;
+            card_primo.Text3 = $"Punti:  {c[0].punti}";
+
+            //retrocessione
+            card_retrocessione.Text2 = $"Ultima:  {c[19].squadra}";
+            card_retrocessione.Text3 = $"Penultima:  {c[18].squadra} - Terzultima:  {c[17].squadra}";
+
+            //squadra che ha segnato piu gol
+            MyF.OrdinaGol(c);
+            card_maxGol.Text2 = c[0].squadra + " - gol: " + c[0].gfatti ;
+            card_maxGol.Text3 = "Seconda: " + c[1].squadra + " - gol: " + c[1].gfatti;
+
+            //squadra che ha subito piu gol
+            MyF.OrdinaGolSubiti(c);
+            card_maxGolSubiti.Text2 = c[0].squadra + " - gol: " + c[0].gsubiti;
+            card_maxGolSubiti.Text3 = "Seconda: " + c[1].squadra + " - gol: " + c[1].gsubiti;
         }
     }
 }

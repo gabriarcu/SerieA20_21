@@ -30,12 +30,12 @@ namespace SerieA20_21
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -97,7 +97,10 @@ namespace SerieA20_21
             this.cbo_squadra = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.xuiCard1 = new XanderUI.XUICard();
+            this.card_retrocessione = new XanderUI.XUICard();
+            this.card_primo = new XanderUI.XUICard();
+            this.card_maxGolSubiti = new XanderUI.XUICard();
+            this.card_maxGol = new XanderUI.XUICard();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btm_esci = new XanderUI.XUIButton();
             this.btn_MiglioriPeggiori = new XanderUI.XUIButton();
@@ -107,9 +110,6 @@ namespace SerieA20_21
             this.btn_inserimento = new XanderUI.XUIButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.xuiCard2 = new XanderUI.XUICard();
-            this.xuiCard3 = new XanderUI.XUICard();
-            this.xuiCard4 = new XanderUI.XUICard();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -713,32 +713,32 @@ namespace SerieA20_21
             // 
             // chart2
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart2.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(8, 330);
             this.chart2.Name = "chart2";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart2.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(469, 235);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(8, 71);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1097, 253);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -764,10 +764,10 @@ namespace SerieA20_21
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.xuiCard4);
-            this.tabPage4.Controls.Add(this.xuiCard3);
-            this.tabPage4.Controls.Add(this.xuiCard2);
-            this.tabPage4.Controls.Add(this.xuiCard1);
+            this.tabPage4.Controls.Add(this.card_retrocessione);
+            this.tabPage4.Controls.Add(this.card_primo);
+            this.tabPage4.Controls.Add(this.card_maxGolSubiti);
+            this.tabPage4.Controls.Add(this.card_maxGol);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1140, 573);
@@ -775,20 +775,65 @@ namespace SerieA20_21
             this.tabPage4.Text = "SquadraMaxGol";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // xuiCard1
+            // card_retrocessione
             // 
-            this.xuiCard1.BackColor = System.Drawing.Color.Transparent;
-            this.xuiCard1.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
-            this.xuiCard1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
-            this.xuiCard1.ForeColor = System.Drawing.Color.White;
-            this.xuiCard1.Location = new System.Drawing.Point(23, 260);
-            this.xuiCard1.Name = "xuiCard1";
-            this.xuiCard1.Size = new System.Drawing.Size(500, 216);
-            this.xuiCard1.TabIndex = 0;
-            this.xuiCard1.Text = "xuiCard1";
-            this.xuiCard1.Text1 = "Squadra che ha segnato più gol";
-            this.xuiCard1.Text2 = "1234 5678 9101 1121";
-            this.xuiCard1.Text3 = "Exp: 01/02 - 03/04";
+            this.card_retrocessione.BackColor = System.Drawing.Color.Transparent;
+            this.card_retrocessione.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.card_retrocessione.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.card_retrocessione.ForeColor = System.Drawing.Color.White;
+            this.card_retrocessione.Location = new System.Drawing.Point(436, 17);
+            this.card_retrocessione.Name = "card_retrocessione";
+            this.card_retrocessione.Size = new System.Drawing.Size(696, 216);
+            this.card_retrocessione.TabIndex = 3;
+            this.card_retrocessione.Text = "xuiCard4";
+            this.card_retrocessione.Text1 = "Squadre retrocesse";
+            this.card_retrocessione.Text2 = "1234 5678 9101 1121";
+            this.card_retrocessione.Text3 = "Exp: 01/02 - 03/04";
+            // 
+            // card_primo
+            // 
+            this.card_primo.BackColor = System.Drawing.Color.Transparent;
+            this.card_primo.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.card_primo.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.card_primo.ForeColor = System.Drawing.Color.White;
+            this.card_primo.Location = new System.Drawing.Point(23, 17);
+            this.card_primo.Name = "card_primo";
+            this.card_primo.Size = new System.Drawing.Size(396, 216);
+            this.card_primo.TabIndex = 2;
+            this.card_primo.Text = "xuiCard3";
+            this.card_primo.Text1 = "Prima in Classifica";
+            this.card_primo.Text2 = "1234 5678 9101 1121";
+            this.card_primo.Text3 = "Exp: 01/02 - 03/04";
+            // 
+            // card_maxGolSubiti
+            // 
+            this.card_maxGolSubiti.BackColor = System.Drawing.Color.Transparent;
+            this.card_maxGolSubiti.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.card_maxGolSubiti.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.card_maxGolSubiti.ForeColor = System.Drawing.Color.White;
+            this.card_maxGolSubiti.Location = new System.Drawing.Point(632, 260);
+            this.card_maxGolSubiti.Name = "card_maxGolSubiti";
+            this.card_maxGolSubiti.Size = new System.Drawing.Size(500, 216);
+            this.card_maxGolSubiti.TabIndex = 1;
+            this.card_maxGolSubiti.Text = "xuiCard2";
+            this.card_maxGolSubiti.Text1 = "Squadra che ha subito più gol";
+            this.card_maxGolSubiti.Text2 = "1234 5678 9101 1121";
+            this.card_maxGolSubiti.Text3 = "Exp: 01/02 - 03/04";
+            // 
+            // card_maxGol
+            // 
+            this.card_maxGol.BackColor = System.Drawing.Color.Transparent;
+            this.card_maxGol.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
+            this.card_maxGol.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
+            this.card_maxGol.ForeColor = System.Drawing.Color.White;
+            this.card_maxGol.Location = new System.Drawing.Point(23, 260);
+            this.card_maxGol.Name = "card_maxGol";
+            this.card_maxGol.Size = new System.Drawing.Size(500, 216);
+            this.card_maxGol.TabIndex = 0;
+            this.card_maxGol.Text = "xuiCard1";
+            this.card_maxGol.Text1 = "Squadra che ha segnato più gol";
+            this.card_maxGol.Text2 = "1234 5678 9101 1121";
+            this.card_maxGol.Text3 = "Exp: 01/02 - 03/04";
             // 
             // panel2
             // 
@@ -958,51 +1003,6 @@ namespace SerieA20_21
             this.label1.TabIndex = 0;
             this.label1.Text = "Serie A - Campionato 2020/2021";
             // 
-            // xuiCard2
-            // 
-            this.xuiCard2.BackColor = System.Drawing.Color.Transparent;
-            this.xuiCard2.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
-            this.xuiCard2.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
-            this.xuiCard2.ForeColor = System.Drawing.Color.White;
-            this.xuiCard2.Location = new System.Drawing.Point(632, 260);
-            this.xuiCard2.Name = "xuiCard2";
-            this.xuiCard2.Size = new System.Drawing.Size(500, 216);
-            this.xuiCard2.TabIndex = 1;
-            this.xuiCard2.Text = "xuiCard2";
-            this.xuiCard2.Text1 = "Squadra che ha subito più gol";
-            this.xuiCard2.Text2 = "1234 5678 9101 1121";
-            this.xuiCard2.Text3 = "Exp: 01/02 - 03/04";
-            // 
-            // xuiCard3
-            // 
-            this.xuiCard3.BackColor = System.Drawing.Color.Transparent;
-            this.xuiCard3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
-            this.xuiCard3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
-            this.xuiCard3.ForeColor = System.Drawing.Color.White;
-            this.xuiCard3.Location = new System.Drawing.Point(23, 17);
-            this.xuiCard3.Name = "xuiCard3";
-            this.xuiCard3.Size = new System.Drawing.Size(396, 216);
-            this.xuiCard3.TabIndex = 2;
-            this.xuiCard3.Text = "xuiCard3";
-            this.xuiCard3.Text1 = "Prima in Classifica";
-            this.xuiCard3.Text2 = "1234 5678 9101 1121";
-            this.xuiCard3.Text3 = "Exp: 01/02 - 03/04";
-            // 
-            // xuiCard4
-            // 
-            this.xuiCard4.BackColor = System.Drawing.Color.Transparent;
-            this.xuiCard4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(76)))), ((int)(((byte)(140)))));
-            this.xuiCard4.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(57)))), ((int)(((byte)(125)))));
-            this.xuiCard4.ForeColor = System.Drawing.Color.White;
-            this.xuiCard4.Location = new System.Drawing.Point(436, 17);
-            this.xuiCard4.Name = "xuiCard4";
-            this.xuiCard4.Size = new System.Drawing.Size(696, 216);
-            this.xuiCard4.TabIndex = 3;
-            this.xuiCard4.Text = "xuiCard4";
-            this.xuiCard4.Text1 = "Squadre retrocesse";
-            this.xuiCard4.Text2 = "1234 5678 9101 1121";
-            this.xuiCard4.Text3 = "Exp: 01/02 - 03/04";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1100,7 +1100,7 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private XanderUI.XUICard xuiCard1;
+        private XanderUI.XUICard card_maxGol;
         private XanderUI.XUICustomGroupbox xuiCustomGroupbox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -1115,9 +1115,9 @@ namespace SerieA20_21
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private XanderUI.XUIButton btm_esci;
-        private XanderUI.XUICard xuiCard4;
-        private XanderUI.XUICard xuiCard3;
-        private XanderUI.XUICard xuiCard2;
+        private XanderUI.XUICard card_retrocessione;
+        private XanderUI.XUICard card_primo;
+        private XanderUI.XUICard card_maxGolSubiti;
     }
 }
 

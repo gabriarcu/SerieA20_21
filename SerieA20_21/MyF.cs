@@ -26,6 +26,8 @@ namespace SerieA20_21
             public int pareggiate;
             public int perse;
             public int punti;
+            public int gfatti;
+            public int gsubiti;
         }
         public static void CaricaSquadre(classifica[] cla)
         {
@@ -65,6 +67,48 @@ namespace SerieA20_21
                         Array.Sort(cla, delegate (classifica bla1, classifica bla2)
                         {
                             return bla2.punti.CompareTo(bla1.punti);
+                        });
+
+                    }
+                }
+            }
+        }
+
+        public static void OrdinaGol(classifica[] cla)
+        {
+            for (int x = 0; x < 20; x++)
+            {
+                for (int y = 1; y < 19; y++)
+                {
+                    if (cla[x].gfatti > cla[y].gfatti)
+                    {
+
+                        Array.Sort(cla, (x1, y1) => y1.gfatti.CompareTo(x1.gfatti));
+
+                        Array.Sort(cla, delegate (classifica bla1, classifica bla2)
+                        {
+                            return bla2.gfatti.CompareTo(bla1.gfatti);
+                        });
+
+                    }
+                }
+            }
+        }
+
+        public static void OrdinaGolSubiti(classifica[] cla)
+        {
+            for (int x = 0; x < 20; x++)
+            {
+                for (int y = 1; y < 19; y++)
+                {
+                    if (cla[x].gsubiti > cla[y].gsubiti)
+                    {
+
+                        Array.Sort(cla, (x1, y1) => y1.gsubiti.CompareTo(x1.gsubiti));
+
+                        Array.Sort(cla, delegate (classifica bla1, classifica bla2)
+                        {
+                            return bla2.gsubiti.CompareTo(bla1.gsubiti);
                         });
 
                     }
