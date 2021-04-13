@@ -97,10 +97,10 @@ namespace SerieA20_21
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
-            comboBox1.Items.Add("Tutte");
+            cbo_scgeliSquadra.Items.Add("Tutte");
             for (int i = 1; i < 39; i++)
             {
-                comboBox1.Items.Add($"Giornata {i}");
+               
                 lst_giornata.Items.Add($"Giornata {i}");
             }
 
@@ -108,7 +108,8 @@ namespace SerieA20_21
             for (int i = 0; i < 20; i++)
             {
                 cbo_squadra.Items.Add(c[i].squadra);
-                
+                cbo_scgeliSquadra.Items.Add(c[i].squadra);
+
             }
             int x = 0;
             while (x < num2)
@@ -457,6 +458,7 @@ namespace SerieA20_21
                     t5.Location = new Point(937, (cy));
                     //t5.Text = xy.ToString();
                     t5.AutoSize = false;
+                    t5.TextAlign = HorizontalAlignment.Center;
                     t5.Width = 50;
                     t5.Height = 31;
                     t5.ReadOnly = false;
@@ -477,6 +479,7 @@ namespace SerieA20_21
                     t6.Location = new Point(1017, (cy));
                     //t6.Text = xy.ToString();
                     t6.AutoSize = false;
+                    t6.TextAlign = HorizontalAlignment.Center;
                     t6.Width = 50;
                     t6.Height = 31;
                     t6.ReadOnly = false;
@@ -621,6 +624,91 @@ namespace SerieA20_21
 
             int xx = 0;
 
+            int w = 0;
+
+            for (int zz = 0; zz < 20; zz++)
+            {
+                c[zz].punti = 0;
+                c[zz].vinte = 0;
+                c[zz].pareggiate = 0;
+                c[zz].perse = 0;
+                c[zz].gfatti = 0;
+                c[zz].gsubiti = 0;
+            }
+
+
+            while (w < num)
+            {
+
+
+                if (p[w].risultato1 > p[w].risultato2)
+                {
+                    for (int zz = 0; zz < 20; zz++)
+                    {
+                        if (p[w].squadra1 == c[zz].squadra)
+                        {
+                            c[zz].vinte++;
+                            c[zz].punti += 3;
+                            c[zz].gfatti += p[w].risultato1;
+                            c[zz].gsubiti += p[w].risultato2;
+                        }
+                        if (p[w].squadra2 == c[zz].squadra)
+                        {
+                            c[zz].perse++;
+                            c[zz].gfatti += p[w].risultato2;
+                            c[zz].gsubiti += p[w].risultato1;
+
+                        }
+
+                    }
+                }
+                if (p[w].risultato1 < p[w].risultato2)
+                {
+                    for (int zz = 0; zz < 20; zz++)
+                    {
+                        if (p[w].squadra2 == c[zz].squadra)
+                        {
+                            c[zz].vinte++;
+                            c[zz].punti += 3;
+                            c[zz].gfatti += p[w].risultato1;
+                            c[zz].gsubiti += p[w].risultato2;
+                        }
+                        if (p[w].squadra1 == c[zz].squadra)
+                        {
+                            c[zz].perse++;
+                            c[zz].gfatti += p[w].risultato2;
+                            c[zz].gsubiti += p[w].risultato1;
+                        }
+
+                    }
+                }
+                if (p[w].risultato1 == p[w].risultato2)
+                {
+                    for (int zz = 0; zz < 20; zz++)
+                    {
+                        if (p[w].squadra1 == c[zz].squadra)
+                        {
+                            c[zz].pareggiate++;
+                            c[zz].punti += 1;
+                            c[zz].gfatti += p[w].risultato1;
+                            c[zz].gsubiti += p[w].risultato2;
+                        }
+                        if (p[w].squadra2 == c[zz].squadra)
+                        {
+                            c[zz].pareggiate++;
+                            c[zz].punti += 1;
+                            c[zz].gfatti += p[w].risultato2;
+                            c[zz].gsubiti += p[w].risultato1;
+                        }
+
+                    }
+                }
+
+
+
+                w = w + 1;
+            }
+
             MyF.OrdinaClassifica(c);
 
             while (xx <20)
@@ -669,7 +757,8 @@ namespace SerieA20_21
                     graf_pareggiate.Percentage = (int)pa;
 
                     txt_punti.Text = c[xx].punti.ToString();
-
+                    txt_golFatti.Text= c[xx].gfatti.ToString();
+                    txt_golSubiti.Text = c[xx].gsubiti.ToString();
                     txt_posizione.Text = (xx+1).ToString();
                     
 
@@ -696,6 +785,8 @@ namespace SerieA20_21
                 c[zz].vinte = 0;
                 c[zz].pareggiate = 0;
                 c[zz].perse = 0;
+                c[zz].gfatti = 0;
+                c[zz].gsubiti=0;
             }
 
 
@@ -711,14 +802,17 @@ namespace SerieA20_21
                         {
                             c[zz].vinte++;
                             c[zz].punti += 3;
+                            c[zz].gfatti += p[w].risultato1;
+                            c[zz].gsubiti += p[w].risultato2;
                         }
                         if (p[w].squadra2 == c[zz].squadra)
                         {
                             c[zz].perse++;
+                            c[zz].gfatti += p[w].risultato2;
+                            c[zz].gsubiti += p[w].risultato1;
 
                         }
-                        c[zz].gfatti += p[w].risultato1;
-                        c[zz].gsubiti += p[w].risultato2;
+                        
                     }
                 }
                 if (p[w].risultato1 < p[w].risultato2)
@@ -729,13 +823,16 @@ namespace SerieA20_21
                         {
                             c[zz].vinte++;
                             c[zz].punti += 3;
+                            c[zz].gfatti += p[w].risultato1;
+                            c[zz].gsubiti += p[w].risultato2;
                         }
                         if (p[w].squadra1 == c[zz].squadra)
                         {
                             c[zz].perse++;
+                            c[zz].gfatti += p[w].risultato2;
+                            c[zz].gsubiti += p[w].risultato1;
                         }
-                        c[zz].gfatti += p[w].risultato1;
-                        c[zz].gsubiti += p[w].risultato2;
+                        
                     }
                 }
                 if (p[w].risultato1 == p[w].risultato2)
@@ -746,14 +843,17 @@ namespace SerieA20_21
                         {
                             c[zz].pareggiate++;
                             c[zz].punti += 1;
+                            c[zz].gfatti += p[w].risultato1;
+                            c[zz].gsubiti += p[w].risultato2;
                         }
                         if (p[w].squadra2 == c[zz].squadra)
                         {
                             c[zz].pareggiate++;
                             c[zz].punti += 1;
+                            c[zz].gfatti += p[w].risultato2;
+                            c[zz].gsubiti += p[w].risultato1;
                         }
-                        c[zz].gfatti += p[w].risultato1;
-                        c[zz].gsubiti += p[w].risultato2;
+                        
                     }
                 }
                 
@@ -770,8 +870,8 @@ namespace SerieA20_21
             card_primo.Text3 = $"Punti:  {c[0].punti}";
 
             //retrocessione
-            card_retrocessione.Text2 = $"Ultima:  {c[19].squadra}";
-            card_retrocessione.Text3 = $"Penultima:  {c[18].squadra} - Terzultima:  {c[17].squadra}";
+            card_retrocessione.Text2 = $"Ultima:  {c[19].squadra} - Punti: {c[19].punti}";
+            card_retrocessione.Text3 = $"Penultima:  {c[18].squadra} - Punti: {c[18].punti} -- Terzultima:  {c[17].squadra} - Punti: {c[17].punti}";
 
             //squadra che ha segnato piu gol
             MyF.OrdinaGol(c);
@@ -782,6 +882,81 @@ namespace SerieA20_21
             MyF.OrdinaGolSubiti(c);
             card_maxGolSubiti.Text2 = c[0].squadra + " - gol: " + c[0].gsubiti;
             card_maxGolSubiti.Text3 = "Seconda: " + c[1].squadra + " - gol: " + c[1].gsubiti;
+
+        }
+
+        private void cbo_scgeliSquadra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indice = cbo_scgeliSquadra.SelectedIndex;
+
+            
+            switch(indice)
+            {
+                case 0:
+                    int y1 = 0;
+
+                    ListViewItem Riga1;
+                    listView1.Items.Clear();
+
+                    while (y1 < num)
+                    {
+                        Riga1 = new ListViewItem(new string[]
+                        {
+
+                    p[y1].giornata.ToString(),
+                    p[y1].dataOra.ToString("d"),
+                    p[y1].dataOra.ToString("t"),
+                    p[y1].stadio,
+                    p[y1].squadra1,
+                    p[y1].squadra2,
+                    $"{p[y1].risultato1} - {p[y1].risultato2}"
+
+
+                        }
+
+                        );
+
+                        listView1.Items.Add(Riga1);
+
+
+                        y1++;
+                    }
+                    break;
+                default:
+                    int y = 0;
+
+                    ListViewItem Riga2;
+                    listView1.Items.Clear();
+                    while (y < num)
+                    {
+                        if (p[y].squadra1 == c[indice - 1].squadra || p[y].squadra2 == c[indice - 1].squadra)
+                        {
+                            Riga2 = new ListViewItem(new string[]
+                            {
+                        p[y].giornata.ToString(),
+                        p[y].dataOra.ToString("d"),
+                        p[y].dataOra.ToString("t"),
+                        p[y].stadio,
+                        p[y].squadra1,
+                        p[y].squadra2,
+                        $"{p[y].risultato1} - {p[y].risultato2}"
+                            }
+
+
+                            );
+
+                            listView1.Items.Add(Riga2);
+                        }
+
+                        y++;
+                    }
+                    break;
+
+
+
+            }
+            
+
         }
     }
 }
